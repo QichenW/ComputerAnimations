@@ -5,7 +5,9 @@
       <sourceFolder url="file://$MODULE_DIR$/main.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/SimpleObjLoader.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/MatrixGenerator.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/MatrixGenerator.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/SimpleObjLoader.cpp" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />

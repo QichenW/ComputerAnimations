@@ -3,7 +3,7 @@ project(glutProject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h)
+set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h utils/MatrixGenerator.cpp utils/MatrixGenerator.h)
 ## add_executable(glutProject ${SOURCE_FILES} utils/Cool.cpp utils/Cool.h utils/Shy.cpp utils/Shy.h utils/Guy.h)
 
 #########################################################
