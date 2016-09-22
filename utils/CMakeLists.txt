@@ -1,4 +1,4 @@
 set (SOURCE_FILES
-        src/SimpleObjLoader.h
-        src/SimpleObjLoader.cpp
+        utils/SimpleObjLoader.h
+        utils/SimpleObjLoader.cpp
         )
