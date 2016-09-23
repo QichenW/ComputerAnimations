@@ -19,7 +19,7 @@
 class SimpleObjLoader
 {
 public:
-    GLuint static loadObj(char *fileName);
+    static GLuint loadObj(char *fileName);
 };
 
 #endif //GLUTPROJECT_SIMPLEOBJHEADER_H

@@ -3,26 +3,26 @@
 //
 
 
-// standard
-#include <assert.h>
-#include <iostream>
 #include <MatrixGenerator.h>
-#include "SimpleObjLoader.h"
+#include <UserInputManager.h>
+#include <SimpleObjLoader.h>
 
 using namespace std;
 
 GLuint object;
-// pitch, yaw, roll, x, y, z
+// TODO pitch, yaw, roll, x, y, z
 GLfloat KeyFrames[6][6];
 float objectRotation;
 int window;
 bool areKeyFramesSet =false;
-static char* OBJECT_FILE_NAME = (char *) "elepham.obj";
+static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 float m[] = { 1.0f, 0.0f, 0.0f, 0.0f,
-              0.0f, 2.0f, 0.0f, 0.0f,
+              0.0f, 1.0f, 0.0f, 0.0f,
               0.0f, 0.0f, 1.0f, 0.0f,
               0.0f, 0.0f, -10.0f, 1.0f };
+
 void drawFrame();
+
 
 void reshape(int w, int h) {
     glViewport(0, 0, w, h);
@@ -51,8 +51,10 @@ void drawFrame() {
     glScalef(0.1, 0.1, 0.1);
     glColor3f(0.1, 0.45, 0.1);
 // TODO the matrix goes here
-    glMultMatrixf(MatrixGenerator::generateFromEulerAngle(m,m));
-    //glMultMatrixf(m);
+    float *matrix;
+
+    matrix  = MatrixGenerator::generateFromEulerAngle(m,m);
+    glMultMatrixf(matrix);
 
     glCallList(object);
     glPopMatrix();
@@ -70,25 +72,6 @@ void display(void) {
 
 }
 
-void keyboard(unsigned char key, int x, int y) {
-    switch ((char) key) {
-        case 'a':
-            areKeyFramesSet = true;
-            break;
-        case 'b':
-            areKeyFramesSet= false;
-            break;
-        case 'q':
-        case 'Q':
-        case 27:    /* ESC */
-            glutDestroyWindow(window);
-            exit(0);
-        default:
-            break;
-    }
-    return;
-}
-
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
@@ -98,8 +81,14 @@ int main(int argc, char **argv) {
     glutReshapeFunc(reshape);
     glutDisplayFunc(display);
     glutIdleFunc(display);
-    glutKeyboardFunc(keyboard);
-    object = SimpleObjLoader::loadObj(OBJECT_FILE_NAME);//replace porsche.obj with radar.obj or any other .obj to display it
+    UserInputManager(&window, &areKeyFramesSet);
+    glutKeyboardFunc(UserInputManager::keyboardFunc);
+    glutMouseFunc(UserInputManager::mouseFunc);
+    object = SimpleObjLoader::loadObj(OBJECT_FILE_NAME);
+
+    /* Create the menu structure and attach it to the right mouse button. */
+    UserInputManager::createMouseMenu();
+
     glutMainLoop();
     return 0;
 }

@@ -3,7 +3,7 @@ project(glutProject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h utils/MatrixGenerator.cpp utils/MatrixGenerator.h)
+set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h utils/MatrixGenerator.cpp utils/MatrixGenerator.h utils/UserInputManager.cpp utils/UserInputManager.h)
 ## add_executable(glutProject ${SOURCE_FILES} utils/Cool.cpp utils/Cool.h utils/Shy.cpp utils/Shy.h utils/Guy.h)
 
 #########################################################
@@ -34,7 +34,7 @@ target_link_libraries(glutProject ${EXTRA_LIBS})
 if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 
     # list of files for which we add a copy rule
-    set(data_SHADOW elepham.obj)
+    set(data_SHADOW elephant.obj)
 
     foreach(item IN LISTS data_SHADOW)
         message(STATUS ${item})
@@ -47,4 +47,4 @@ if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 endif()
 
 # files are only copied if a target depends on them
-add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/elepham.obj")
+add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/elephant.obj")
