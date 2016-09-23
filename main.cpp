@@ -77,7 +77,7 @@ int main(int argc, char **argv) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1280, 640);
     glutInitWindowPosition(100, 100);
-    window = glutCreateWindow("CSCI 6555 lab1 : key frame");
+    window = glutCreateWindow("CSCI 6555 lab1 : key frame and interpolation");
     glutReshapeFunc(reshape);
     glutDisplayFunc(display);
     glutIdleFunc(display);
