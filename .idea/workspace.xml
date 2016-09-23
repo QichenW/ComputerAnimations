@@ -15,18 +15,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20259426-4258-46ad-bf43-f6ced7870ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/UserInputManager.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/utils/UserInputManager.h" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/elepham.obj" afterPath="$PROJECT_DIR$/data/elephant.obj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/dictionaries/qichen.xml" afterPath="$PROJECT_DIR$/.idea/dictionaries/qichen.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/glutProject.iml" afterPath="$PROJECT_DIR$/.idea/glutProject.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.gitignore" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/main.cpp" afterPath="$PROJECT_DIR$/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/CMakeLists.txt" afterPath="$PROJECT_DIR$/utils/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/MatrixGenerator.cpp" afterPath="$PROJECT_DIR$/utils/MatrixGenerator.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/MatrixGenerator.h" afterPath="$PROJECT_DIR$/utils/MatrixGenerator.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/utils/SimpleObjLoader.h" afterPath="$PROJECT_DIR$/utils/SimpleObjLoader.h" />
     </list>
     <ignored path="glutProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,14 +36,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="105">
-              <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+            <state relative-caret-position="465">
+              <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
               <folding>
                 <element signature="e#87#115#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name=".gitignore" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/.gitignore">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="15">
+              <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,6 +173,7 @@
         <option value="$PROJECT_DIR$/main.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/utils/UserInputManager.cpp" />
+        <option value="$PROJECT_DIR$/.gitignore" />
       </list>
     </option>
   </component>
@@ -498,7 +499,7 @@
       <option name="presentableId" value="Default" />
       <updated>1474046838763</updated>
       <workItem from="1474046840091" duration="47657000" />
-      <workItem from="1474606676796" duration="7320000" />
+      <workItem from="1474606676796" duration="9094000" />
     </task>
     <task id="LOCAL-00001" summary="the matrix generator class is created">
       <created>1474572078187</created>
@@ -507,11 +508,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474572078187</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="pop up menu created">
+      <created>1474614370176</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1474614370176</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="54977000" />
+    <option name="totallyTimeSpent" value="56751000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="154" y="23" width="1701" height="1000" extended-state="0" />
@@ -537,6 +545,9 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName="*.gitignore" />
+  </component>
   <component name="Vcs.Log.UiProperties">
     <option name="RECENTLY_FILTERED_USER_GROUPS">
       <collection />
@@ -551,7 +562,8 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="the obj loader is sorted" />
     <MESSAGE value="the matrix generator class is created" />
-    <option name="LAST_COMMIT_MESSAGE" value="the matrix generator class is created" />
+    <MESSAGE value="pop up menu created" />
+    <option name="LAST_COMMIT_MESSAGE" value="pop up menu created" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -798,11 +810,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="28" selection-start-line="7" selection-start-column="28" selection-end-line="7" selection-end-column="28" />
+        <state relative-caret-position="465">
+          <caret line="31" column="31" selection-start-line="31" selection-start-column="31" selection-end-line="31" selection-end-column="31" />
           <folding>
             <element signature="e#87#115#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/.gitignore">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="6" selection-start-line="1" selection-start-column="6" selection-end-line="1" selection-end-column="6" />
+          <folding />
         </state>
       </provider>
     </entry>
