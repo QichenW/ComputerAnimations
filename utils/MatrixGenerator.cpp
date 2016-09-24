@@ -18,20 +18,22 @@ float* MatrixGenerator::generateFrameFromEulerAngle(float *eulerAngle, float *co
     float translationY = *(coordinates + 1);
     float translationZ = *(coordinates + 2);
     initTransformationMatrixAsIdentity();
-    //TODO debug only
-    printTransformationMatrix();
+
 
     getHomogeneousWithEulerAngle(eulerAngle);
 
-    transformationMatrix[0][3] += translationX;
-    transformationMatrix[1][3] += translationY;
-    transformationMatrix[2][3] += translationZ;
-    //TODO debug only
-    printTransformationMatrix();
-    static float m[] ={ 1.0f, 0.0f, 0.0f, 0.0f,
-                 0.0f, 1.0f, 0.0f, 0.0f,
-                 0.0f, 0.0f, 1.0f, 0.0f,
-                 0.0f, 0.0f, -10.0f, 1.0f };
+    transformationMatrix[3][0] += translationX;
+    transformationMatrix[3][1] += translationY;
+    transformationMatrix[3][2] += translationZ;
+//    TODO debug only
+//    printTransformationMatrix();
+    /**
+     * openGL has column major matrix, but the flattened matrix looks like m[] below
+     * **/
+//    static float m[] ={ 1.0f, 0.0f, 0.0f, 0.0f,
+//                 0.0f, 1.0f, 0.0f, 0.0f,
+//                 0.0f, 0.0f, 1.0f, 0.0f,
+//                 0.0f, 0.0f, -10.0f, 1.0f };
     int i,j;
     for(i = 0; i < 4; i++){
         for (j=0; j< 4; j++){

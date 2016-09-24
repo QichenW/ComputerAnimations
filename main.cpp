@@ -22,7 +22,7 @@ float m[] = { 1.0f, 0.0f, 0.0f, 0.0f,
               0.0f, 0.0f, -10.0f, 1.0f };
 
 float eulerAngle[] = {0,0,30};
-float trip[] = {0,0,0};
+float trip[] = {0,100,300};
 
 void drawFrame();
 
