@@ -13,15 +13,21 @@ using namespace std;
 static float transformationMatrix[4][4] ={};
 static float flattenedTransformationMatrix[16] ={};
 
-float* MatrixGenerator::generateFrameFromEulerAngle(float *eulerAngle, float *coordinates){
-    float translationX = *coordinates;
-    float translationY = *(coordinates + 1);
-    float translationZ = *(coordinates + 2);
+/**
+ * @parm is either a quaternion or a vector suggesting Euler Angle
+ * **/
+float* MatrixGenerator::generateFrameFromUserInput(float *tuple, float *trip, bool isQuaternion){
+    float translationX = *trip;
+    float translationY = *(trip + 1);
+    float translationZ = *(trip + 2);
     initTransformationMatrixAsIdentity();
 
-
-    getHomogeneousWithEulerAngle(eulerAngle);
-
+    if(isQuaternion){
+        getHomogeneousFromQuaternion(tuple);
+    } else {
+        getHomogeneousFromEulerAngle(tuple);
+    }
+    // add the translation to transform matrix
     transformationMatrix[3][0] += translationX;
     transformationMatrix[3][1] += translationY;
     transformationMatrix[3][2] += translationZ;
@@ -43,7 +49,13 @@ float* MatrixGenerator::generateFrameFromEulerAngle(float *eulerAngle, float *co
     return  flattenedTransformationMatrix;
 }
 
-void MatrixGenerator::getHomogeneousWithEulerAngle(float * eulerAngle) {
+//TODO write the function
+void MatrixGenerator::getHomogeneousFromQuaternion(float *quaternion) {
+
+}
+
+
+void MatrixGenerator::getHomogeneousFromEulerAngle(float *eulerAngle) {
     /**
      * pitch, yaw, roll
      * */

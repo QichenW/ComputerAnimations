@@ -14,15 +14,12 @@ GLuint object;
 GLdouble KeyFrames[6][6];
 float objectRotation;
 int window;
-bool areKeyFramesSet =false;
+bool areKeyFramesSet =false, isQuaternion = false;
 static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
-float m[] = { 1.0f, 0.0f, 0.0f, 0.0f,
-              0.0f, 1.0f, 0.0f, 0.0f,
-              0.0f, 0.0f, 1.0f, 0.0f,
-              0.0f, 0.0f, -10.0f, 1.0f };
 
-float eulerAngle[] = {0,0,30};
-float trip[] = {0,100,300};
+float eulerAngle[] = {45,45,45};
+float quaternion[4] = {};
+float trip[] = {300,0,0};
 
 void drawFrame();
 
@@ -53,8 +50,9 @@ void drawFrame() {
     glTranslatef(0, (GLfloat) -40.00, -150);
     glScalef(0.1, 0.1, 0.1);
     glColor3f(0.1, 0.45, 0.1);
-// TODO the matrix goes here
-    glMultMatrixf(MatrixGenerator::generateFrameFromEulerAngle(eulerAngle, trip));
+
+// TODO the matrix goes here, quaternion version is not yet done
+    glMultMatrixf(MatrixGenerator::generateFrameFromUserInput(eulerAngle, trip, isQuaternion));
 
     glCallList(object);
     glPopMatrix();
