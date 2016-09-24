@@ -14,7 +14,7 @@
 
 class UserInterfaceManager {
 public:
-    static void renderString(int x, int y,char *string);
+    static void renderString(int interpolationChosen, int orientationChosen, bool arePointsSet);
 };
 
 

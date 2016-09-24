@@ -15,13 +15,16 @@ GLuint object;
 GLdouble KeyFrames[6][6];
 float objectRotation;
 int window;
+// orientationChosen    -1: not chosen, 0 : euler angle, 1 : quaternion
+// interpolationChosen  -1: not chosen, 0 : Catmull-Rom, 1 : B-spline
+int orientationChosen = 1, interpolationChosen = 0;
+bool arePointsSet = false;
 bool areKeyFramesSet =false, isQuaternion = false;
 static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 float eulerAngle[] = {45,45,45};
 float quaternion[4] = {};
 float trip[] = {300,0,0};
-char *infoString = (char *) "Right Click for Options";
 
 void drawFrame();
 
@@ -64,7 +67,7 @@ void display(void) {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 // TODO change the setup info char *
-    UserInterfaceManager::renderString(10,10,infoString);
+    UserInterfaceManager::renderString(interpolationChosen,orientationChosen, arePointsSet);
     if(!areKeyFramesSet){
         displayObject();
     } else {

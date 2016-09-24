@@ -3,17 +3,17 @@ project(glutProject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h utils/MatrixGenerator.cpp utils/MatrixGenerator.h utils/UserInputManager.cpp utils/UserInputManager.h utils/UserInterfaceManager.cpp utils/UserInterfaceManager.h)
-## add_executable(glutProject ${SOURCE_FILES} utils/Cool.cpp utils/Cool.h utils/Shy.cpp utils/Shy.h utils/Guy.h)
+set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h utils/MatrixGenerator.cpp utils/MatrixGenerator.h utils/UserInputManager.cpp utils/UserInputManager.h ui/UserInterfaceManager.cpp ui/UserInterfaceManager.h)
 
 #########################################################
 # Include Files
 #########################################################
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/utils
+        ${CMAKE_CURRENT_SOURCE_DIR}/ui
 )
 
-include(utils/CMakeLists.txt)
+#include(utils/CMakeLists.txt ui/CMakeLists.txt)
 add_executable (glutProject
         main.cpp
         ${SOURCE_FILES})

@@ -5,6 +5,4 @@ set (SOURCE_FILES
         utils/MatrixGenerator.cpp
         utils/UserInputManager.h
         utils/UserInputManager.cpp
-        utils/UserInterfaceManager.h
-        utils/UserInterfaceManager.cpp
         )
