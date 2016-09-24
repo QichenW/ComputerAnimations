@@ -1,5 +1,5 @@
 //  Created by Qichen on 8/28/16.
-//  Copyright © 2016 SEAS. All rights reserved.
+//  Copyright © 2016 Qichen Wang. All rights reserved.
 //
 
 
@@ -11,7 +11,7 @@ using namespace std;
 
 GLuint object;
 // TODO pitch, yaw, roll, x, y, z
-GLfloat KeyFrames[6][6];
+GLdouble KeyFrames[6][6];
 float objectRotation;
 int window;
 bool areKeyFramesSet =false;
@@ -20,6 +20,9 @@ float m[] = { 1.0f, 0.0f, 0.0f, 0.0f,
               0.0f, 1.0f, 0.0f, 0.0f,
               0.0f, 0.0f, 1.0f, 0.0f,
               0.0f, 0.0f, -10.0f, 1.0f };
+
+float eulerAngle[] = {0,0,30};
+float trip[] = {0,0,0};
 
 void drawFrame();
 
@@ -51,10 +54,7 @@ void drawFrame() {
     glScalef(0.1, 0.1, 0.1);
     glColor3f(0.1, 0.45, 0.1);
 // TODO the matrix goes here
-    float *matrix;
-
-    matrix  = MatrixGenerator::generateFromEulerAngle(m,m);
-    glMultMatrixf(matrix);
+    glMultMatrixf(MatrixGenerator::generateFrameFromEulerAngle(eulerAngle, trip));
 
     glCallList(object);
     glPopMatrix();
@@ -71,7 +71,9 @@ void display(void) {
     glutSwapBuffers(); //swap the buffers
 
 }
-
+/**
+ * openGL works in a left-handed coordinate system by default
+ * **/
 int main(int argc, char **argv) {
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);

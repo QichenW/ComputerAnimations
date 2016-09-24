@@ -16,6 +16,15 @@
 class MatrixGenerator
 {
 public:
-    static float* generateFromEulerAngle(float* eulerAngle, float* coordinates);
+    static float* generateFrameFromEulerAngle(float *eulerAngle, float *coordinates);
+private:
+    static void getHomogeneousWithEulerAngle(float *eulerAngle);
+    static void initTransformationMatrixAsIdentity();
+
+    static void initEulerAngleMatrices(float * matrix1, float * matrix2, float * matrix3);
+
+    static void applyRotation(float rotationMatrix[4][4]);
+
+    static void printTransformationMatrix();
 };
 #endif //GLUTPROJECT_MATRIXGENERATOR_H
