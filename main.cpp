@@ -6,6 +6,7 @@
 #include <MatrixGenerator.h>
 #include <UserInputManager.h>
 #include <SimpleObjLoader.h>
+#include <UserInterfaceManager.h>
 
 using namespace std;
 
@@ -20,6 +21,7 @@ static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 float eulerAngle[] = {45,45,45};
 float quaternion[4] = {};
 float trip[] = {300,0,0};
+char *infoString = (char *) "Right Click for Options";
 
 void drawFrame();
 
@@ -61,6 +63,8 @@ void drawFrame() {
 void display(void) {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+// TODO change the setup info char *
+    UserInterfaceManager::renderString(10,10,infoString);
     if(!areKeyFramesSet){
         displayObject();
     } else {
@@ -85,7 +89,6 @@ int main(int argc, char **argv) {
     glutKeyboardFunc(UserInputManager::keyboardFunc);
     glutMouseFunc(UserInputManager::mouseFunc);
     object = SimpleObjLoader::loadObj(OBJECT_FILE_NAME);
-
     /* Create the menu structure and attach it to the right mouse button. */
     UserInputManager::createMouseMenu();
 

@@ -7,8 +7,10 @@
       <sourceFolder url="file://$MODULE_DIR$/utils/SimpleObjLoader.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/UserInputManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/MatrixGenerator.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/UserInterfaceManager.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/SimpleObjLoader.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/UserInputManager.cpp" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/utils/UserInterfaceManager.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/CMakeLists.txt" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/utils/MatrixGenerator.h" isTestSource="false" />
     </content>

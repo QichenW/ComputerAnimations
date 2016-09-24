@@ -23,24 +23,13 @@ void UserInputManager::mainMenu (int id)
 
     switch (id)
     {
-        case 1 : /* reset default values */
-            glNewList (++indexOfMenuInList, GL_COMPILE_AND_EXECUTE);
-            glColor3d (0.0, 0.0, 0.0);
-            glLineWidth (1.0);
-            glEndList ();
+        case 1 : /* TODO reset default values */
+
             break;
-        case 2 : /* clear the screen */
-            glDeleteLists (1, indexOfMenuInList);
-            indexOfMenuInList = 2;
-            glGetDoublev (GL_LINE_WIDTH, &lineWidth);
-            glGetDoublev (GL_CURRENT_COLOR, color);
-            glNewList (++indexOfMenuInList, GL_COMPILE);
-            glColor4dv (color);
-            glLineWidth ((GLfloat) lineWidth);
-            glEndList ();
-            glutPostRedisplay ();
+        case 2 : /* TODO start animation */
+
             break;
-        default : /* in case none of the above occur */
+        default :
             break;
     }
 }
@@ -98,6 +87,7 @@ void UserInputManager::mouseFunc (int button, int state, int x, int y)
             glVertex2i (x, ySize-y);
             glEnd ();
             glEndList ();
+            //TODO figure out what above lines do
             glFlush ();
             pointsChosen = 0;
         }
@@ -114,8 +104,8 @@ void UserInputManager::createMouseMenu() {
     glutCreateMenu (UserInputManager::mainMenu);
     glutAddSubMenu ("Orientation", orientation_menu);
     glutAddSubMenu ("Inbetweening", inbetweening_menu);
-    glutAddMenuEntry ("Reset defaults", 1);
-    glutAddMenuEntry ("Clear window", 2);
+    glutAddMenuEntry ("Reset", 1);
+    glutAddMenuEntry ("Start", 2);
     glutAttachMenu (GLUT_RIGHT_BUTTON);
 }
 
