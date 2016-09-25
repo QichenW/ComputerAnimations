@@ -69,10 +69,9 @@ void drawFrame() {
 void display(void) {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
-// TODO change the setup info char *
-    UserInterfaceManager::renderStatusMessage(prefs.getInterpolationMode(),
-                                              prefs.getOrientationMode(),
-                                              prefs.arePointsSet());
+
+    // the setup info char * on the bottom left corner on window
+    UserInterfaceManager::renderStatusMessage(prefs.areKeyFramesSet());
     if(!prefs.areKeyFramesSet()){
         displayObject();
     } else {

@@ -6,35 +6,17 @@
 #include <cstdlib>
 #include "StringUtils.h"
 
-static const char * strReqestMouseInput ="Right click for options, choose ";
-static const char *strOrientation ="\"orientation representation\" ";
-static const char *strInterpolation ="\"interpolation method\" ";
-static const char *strInstructionForVectorInputs[3]= { "Please type in the pitch, yaw, roll for 4 key frames, ",
-                                                "Please type in 4 quaternions, ",
-                                                       "Please type in x-y-z coordinates for 4 key frames, "};
-static const char *strFinishEnter = "then press enter";
+static const char * strReqestMouseInput ="Right click and load a setup (.txt) file";
+static const char *strFileLoaded ="Setup file is loaded, right click to start animation or reset";
 static char *strStatusInfo;
 
 
-void UserInterfaceManager::renderStatusMessage(int interpolationChosen, int orientationChosen, bool arePointsSet) {
+void UserInterfaceManager::renderStatusMessage(bool areKeyFramesSet) {
 
-    if ((interpolationChosen != -1 && orientationChosen!= -1)){
-        if(arePointsSet){
-            strStatusInfo = buildString((const char *[])
-                                                {strInstructionForVectorInputs[orientationChosen], strFinishEnter}, 2);
+    if (areKeyFramesSet){
+            strStatusInfo = buildString((const char *[]) {strFileLoaded}, 1);
         } else {
-            strStatusInfo = buildString((const char *[]) {strInstructionForVectorInputs[2], strFinishEnter}, 2);
-        }
-
-    } else {
-        if (interpolationChosen == -1 && orientationChosen== -1) {
-            strStatusInfo = buildString((const char *[]) {strReqestMouseInput, strOrientation, strInterpolation},
-                                        3);
-        } else if (interpolationChosen!= -1) {
-            strStatusInfo = buildString((const char *[]) {strReqestMouseInput, strOrientation}, 2);
-        } else {
-            strStatusInfo = buildString((const char *[]) {strReqestMouseInput, strInterpolation}, 2);
-        }
+        strStatusInfo = buildString((const char *[]) {strReqestMouseInput}, 1);
     }
     printInWindow(strStatusInfo, true);
 }
@@ -71,7 +53,7 @@ void UserInterfaceManager::printInWindow(char *strInfo, bool isStatusInfo) {
  */
 char *UserInterfaceManager::buildString(const char **pointer, int numberOfSegments) {
     // allocate enough memory for this char*
-    char *infoString= (char *) malloc(strlen(strInstructionForVectorInputs[1])* 8);
+    char *infoString= (char *) malloc(strlen(strFileLoaded)* 3);
 
     while(numberOfSegments > 0) {
         strcat(infoString, *pointer++);

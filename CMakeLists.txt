@@ -1,5 +1,7 @@
 cmake_minimum_required(VERSION 3.6)
 project(glutProject)
+## use the open source file dialog "native file dialog"
+add_subdirectory(nfd)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
@@ -15,6 +17,7 @@ include_directories(
         src/ui
         src/setup
         src/matrix
+        ${CMAKE_SOURCE_DIR}/nfd
 )
 
 
@@ -26,12 +29,12 @@ IF (APPLE)
     include_directories (/System/Library/Frameworks)
     find_library (GLUT_LIBRARY GLUT)
     find_library (OpenGL_LIBRARY OpenGL)
-    mark_as_advanced (GLUT_LIBRARY
-            OpenGL_LIBRARY)
-    set (EXTRA_LIBS ${GLUT_LIBRARY} ${OpenGL_LIBRARY})
+    find_library (APPKIT_LIBRARY APPKIT)
+    mark_as_advanced (GLUT_LIBRARY OpenGL_LIBRARY APPKIT_LIBRARY)
+    set (EXTRA_LIBS ${GLUT_LIBRARY} ${OpenGL_LIBRARY} ${APPKIT_LIBRARY})
 ENDIF (APPLE)
 
-target_link_libraries(glutProject ${EXTRA_LIBS})
+target_link_libraries(glutProject ${EXTRA_LIBS} nativefiledialog)
 
 ##################
 # we don't want to copy if we're building in the source dir

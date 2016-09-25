@@ -21,13 +21,17 @@ private:
     static const int CATMULL_ROM_MODE = 0;
     static const int B_SPLINE_MODE = 1;
     static void mainMenu (int id);
-    static void orientationMenu(int id);
-    static void inbetweeningMenu(int id);
+
+/** sub-menus not implemented for now **/
+//    static void orientationMenu(int id);
+//    static void inbetweeningMenu(int id);
 public:
     UserInputManager(int * window, Preferences * preferences);
     static void createMouseMenu();
     static void mouseFunc (int button, int state, int x, int y);
     static void keyboardFunc(unsigned char, int, int);
+
+    static int loadUserInputFromFileDialog();
 };
 
 

@@ -14,6 +14,11 @@
       <sourceFolder url="file://$MODULE_DIR$/src/matrix/MatrixGenerator.h" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/src/matrix/MatrixGenerator.cpp" isTestSource="false" />
       <sourceFolder url="file://$MODULE_DIR$/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nfd/nfd_common.c" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nfd/CMakeLists.txt" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nfd/nfd_common.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nfd/nfd.h" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/nfd/nfd_cocoa.m" isTestSource="false" />
     </content>
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="module-library">
@@ -82,15 +87,14 @@
           <root url="file:///System/Library/Frameworks/CoreVideo.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GameKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenGL.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/StoreKit.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/Contacts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenAL.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CalendarStore.framework/Headers" />
           <root url="file:///System/Library/Frameworks/AVKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/FinderSync.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/Contacts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/WebKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/QuickTime.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/VideoToolbox.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/StoreKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Accounts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SyncServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/AVFoundation.framework/Headers" />
@@ -174,6 +178,7 @@
           <root url="file:///System/Library/Frameworks/AGL.framework/Headers" />
           <root url="file:///System/Library/Frameworks/VideoDecodeAcceleration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ContactsUI.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/VideoToolbox.framework/Headers" />
           <root url="file:///System/Library/Frameworks/NotificationCenter.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreLocation.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DiscRecording.framework/Headers" />
@@ -260,15 +265,14 @@
           <root url="file:///System/Library/Frameworks/CoreVideo.framework/Headers" />
           <root url="file:///System/Library/Frameworks/GameKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenGL.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/StoreKit.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/Contacts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/OpenAL.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CalendarStore.framework/Headers" />
           <root url="file:///System/Library/Frameworks/AVKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/FinderSync.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/Contacts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/WebKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/QuickTime.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/VideoToolbox.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/StoreKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/Accounts.framework/Headers" />
           <root url="file:///System/Library/Frameworks/SyncServices.framework/Headers" />
           <root url="file:///System/Library/Frameworks/AVFoundation.framework/Headers" />
@@ -352,6 +356,7 @@
           <root url="file:///System/Library/Frameworks/AGL.framework/Headers" />
           <root url="file:///System/Library/Frameworks/VideoDecodeAcceleration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ContactsUI.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/VideoToolbox.framework/Headers" />
           <root url="file:///System/Library/Frameworks/NotificationCenter.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreLocation.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DiscRecording.framework/Headers" />
@@ -414,15 +419,14 @@
           <root url="file:///System/Library/Frameworks/CoreVideo.framework" />
           <root url="file:///System/Library/Frameworks/GameKit.framework" />
           <root url="file:///System/Library/Frameworks/OpenGL.framework" />
-          <root url="file:///System/Library/Frameworks/StoreKit.framework" />
+          <root url="file:///System/Library/Frameworks/Contacts.framework" />
           <root url="file:///System/Library/Frameworks/OpenAL.framework" />
           <root url="file:///System/Library/Frameworks/CalendarStore.framework" />
           <root url="file:///System/Library/Frameworks/AVKit.framework" />
           <root url="file:///System/Library/Frameworks/FinderSync.framework" />
-          <root url="file:///System/Library/Frameworks/Contacts.framework" />
           <root url="file:///System/Library/Frameworks/WebKit.framework" />
           <root url="file:///System/Library/Frameworks/QuickTime.framework" />
-          <root url="file:///System/Library/Frameworks/VideoToolbox.framework" />
+          <root url="file:///System/Library/Frameworks/StoreKit.framework" />
           <root url="file:///System/Library/Frameworks/Accounts.framework" />
           <root url="file:///System/Library/Frameworks/SyncServices.framework" />
           <root url="file:///System/Library/Frameworks/AVFoundation.framework" />
@@ -493,6 +497,7 @@
           <root url="file:///System/Library/Frameworks/AGL.framework" />
           <root url="file:///System/Library/Frameworks/VideoDecodeAcceleration.framework" />
           <root url="file:///System/Library/Frameworks/ContactsUI.framework" />
+          <root url="file:///System/Library/Frameworks/VideoToolbox.framework" />
           <root url="file:///System/Library/Frameworks/NotificationCenter.framework" />
           <root url="file:///System/Library/Frameworks/CoreLocation.framework" />
           <root url="file:///System/Library/Frameworks/DiscRecording.framework" />
