@@ -3,7 +3,9 @@ project(glutProject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES src/main.cpp src/loader/SimpleObjLoader.cpp src/loader/SimpleObjLoader.h src/matrix/MatrixGenerator.cpp src/matrix/MatrixGenerator.h src/ui/UserInputManager.cpp src/ui/UserInputManager.h src/ui/StringUtils.cpp src/ui/StringUtils.h)
+set(SOURCE_FILES src/main.cpp src/setup/SimpleObjLoader.cpp src/setup/SimpleObjLoader.h src/matrix/MatrixGenerator.cpp
+        src/matrix/MatrixGenerator.h src/ui/UserInputManager.cpp src/ui/UserInputManager.h
+        src/ui/StringUtils.cpp src/ui/StringUtils.h src/setup/Preferences.cpp src/setup/Preferences.h)
 
 #########################################################
 # Include Files
@@ -11,11 +13,11 @@ set(SOURCE_FILES src/main.cpp src/loader/SimpleObjLoader.cpp src/loader/SimpleOb
 include_directories(
         ${CMAKE_CURRENT_SOURCE_DIR}/src
         src/ui
-        src/loader
+        src/setup
         src/matrix
 )
 
-#include(src/CMakeLists.txt ui/CMakeLists.txt)
+
 add_executable (glutProject
         src/main.cpp
         ${SOURCE_FILES})
@@ -49,4 +51,6 @@ if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 endif()
 
 # files are only copied if a target depends on them
-add_custom_target(data-target ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/elephant.obj")
+add_custom_target(data ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/elephant.obj")
+# add the dependency project to the project target
+ADD_DEPENDENCIES(glutProject data)

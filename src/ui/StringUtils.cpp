@@ -18,13 +18,10 @@ static char *strStatusInfo;
 
 void UserInterfaceManager::renderStatusMessage(int interpolationChosen, int orientationChosen, bool arePointsSet) {
 
-
     if ((interpolationChosen != -1 && orientationChosen!= -1)){
         if(arePointsSet){
             strStatusInfo = buildString((const char *[])
-                                                {strInstructionForVectorInputs[orientationChosen],
-                                                 strFinishEnter}, 2);
-
+                                                {strInstructionForVectorInputs[orientationChosen], strFinishEnter}, 2);
         } else {
             strStatusInfo = buildString((const char *[]) {strInstructionForVectorInputs[2], strFinishEnter}, 2);
         }
@@ -33,14 +30,12 @@ void UserInterfaceManager::renderStatusMessage(int interpolationChosen, int orie
         if (interpolationChosen == -1 && orientationChosen== -1) {
             strStatusInfo = buildString((const char *[]) {strReqestMouseInput, strOrientation, strInterpolation},
                                         3);
-
         } else if (interpolationChosen!= -1) {
             strStatusInfo = buildString((const char *[]) {strReqestMouseInput, strOrientation}, 2);
         } else {
             strStatusInfo = buildString((const char *[]) {strReqestMouseInput, strInterpolation}, 2);
         }
     }
-
     printInWindow(strStatusInfo, true);
 }
 

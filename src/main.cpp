@@ -11,14 +11,13 @@
 using namespace std;
 
 GLuint object;
+Preferences prefs;
 // TODO pitch, yaw, roll, x, y, z
 GLdouble KeyFrames[6][6];
 float objectRotation;
 int window;
-// orientationChosen    -1: not chosen, 0 : euler angle, 1 : quaternion
-// interpolationChosen  -1: not chosen, 0 : Catmull-Rom, 1 : B-spline
-int orientationChosen = 1, interpolationChosen = 1;
-bool arePointsSet = true, areKeyFramesSet =false, isQuaternion = false;
+
+bool isQuaternion = false;
 static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 float eulerAngle[] = {45,45,45};
@@ -66,8 +65,10 @@ void display(void) {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 // TODO change the setup info char *
-    UserInterfaceManager::renderStatusMessage(interpolationChosen, orientationChosen, arePointsSet);
-    if(!areKeyFramesSet){
+    UserInterfaceManager::renderStatusMessage(prefs.getInterpolationMode(),
+                                              prefs.getOrientationMode(),
+                                              prefs.arePointsSet());
+    if(!prefs.areKeyFramesSet()){
         displayObject();
     } else {
         drawFrame();
@@ -79,6 +80,7 @@ void display(void) {
  * openGL works in a left-handed coordinate system by default
  * **/
 int main(int argc, char **argv) {
+    // initiate an instance of prefs to store the user preference
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1280, 640);
@@ -87,7 +89,8 @@ int main(int argc, char **argv) {
     glutReshapeFunc(reshape);
     glutDisplayFunc(display);
     glutIdleFunc(display);
-    UserInputManager(&window, &areKeyFramesSet);
+    //TODO fix this
+    UserInputManager(&window, &prefs);
     glutKeyboardFunc(UserInputManager::keyboardFunc);
     glutMouseFunc(UserInputManager::mouseFunc);
     object = SimpleObjLoader::loadObj(OBJECT_FILE_NAME);

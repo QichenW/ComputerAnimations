@@ -3,6 +3,7 @@
 //
 
 #include <cstdlib>
+#include <setup/Preferences.h>
 #include "UserInputManager.h"
 
 GLuint indexOfMenuInList = 2;
@@ -10,10 +11,10 @@ GLuint indexOfMenuInList = 2;
 int pointsChosen,ySize,x1,y1;
 
 static int* windowID;
-static bool* isReset;
-UserInputManager::UserInputManager(int * window, bool * areKeyFrameSet) {
+Preferences *prefsPointer;
+UserInputManager::UserInputManager(int * window, Preferences* preferences) {
     windowID = window;
-    isReset = areKeyFrameSet;
+    prefsPointer = preferences;
 }
 
 void UserInputManager::mainMenu (int id)
@@ -113,10 +114,10 @@ void UserInputManager::createMouseMenu() {
 void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
     switch ((char) key) {
         case 'a':
-            *isReset = true;
+            (*prefsPointer).setKeyFramesSet(true);
             break;
         case 'b':
-            *isReset= false;
+            (*prefsPointer).setKeyFramesSet(false);
             break;
         case 'q':
         case 'Q':

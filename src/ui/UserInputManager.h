@@ -8,6 +8,8 @@
 // glut
 #if defined(__APPLE__)
 #include <GLUT/glut.h>
+#include <setup/Preferences.h>
+
 #else
 #include <GL/glut.h>
 #endif
@@ -18,7 +20,7 @@ private:
     static void orientationMenu(int id);
     static void inbetweeningMenu(int id);
 public:
-    UserInputManager(int * window, bool * areKeyFrameSet);
+    UserInputManager(int * window, Preferences * preferences);
     static void createMouseMenu();
     static void mouseFunc (int button, int state, int x, int y);
     static void keyboardFunc(unsigned char, int, int);
