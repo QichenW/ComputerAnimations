@@ -16,6 +16,10 @@
 
 class UserInputManager {
 private:
+    static const int EULER_ANGLE_MODE = 0;
+    static const int QUATERNION_MODE = 1;
+    static const int CATMULL_ROM_MODE = 0;
+    static const int B_SPLINE_MODE = 1;
     static void mainMenu (int id);
     static void orientationMenu(int id);
     static void inbetweeningMenu(int id);

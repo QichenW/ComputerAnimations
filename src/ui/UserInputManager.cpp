@@ -41,9 +41,11 @@ void UserInputManager::orientationMenu(int id)
     glNewList (++indexOfMenuInList, GL_COMPILE_AND_EXECUTE);
     switch (id)
     {
-        case 1 : //TODO Euler Angle
+        case 1 :
+            (*prefsPointer).setOrientationMode(EULER_ANGLE_MODE);
             break;
-        case 2 : //TODO Quaternion
+        case 2 :
+            (*prefsPointer).setOrientationMode(QUATERNION_MODE);
             break;
 
         default : /* for any case not covered above, leave color unchanged */
@@ -53,16 +55,15 @@ void UserInputManager::orientationMenu(int id)
     pointsChosen = 0;
 }
 
-void UserInputManager::inbetweeningMenu(int id)
-/* This is the callback function for the size menu. */
-{
+void UserInputManager::inbetweeningMenu(int id) {
     glNewList (++indexOfMenuInList, GL_COMPILE_AND_EXECUTE);
     switch (id)
     {
-        case 1 : //TODO Catmul-Rom
-
+        case 1 :
+            (*prefsPointer).setInterpolationMode(CATMULL_ROM_MODE);
             break;
-        case 2 : //TODO B-Spline
+        case 2 :
+            (*prefsPointer).setInterpolationMode(B_SPLINE_MODE);
             break;
         default :
             break;
@@ -70,9 +71,7 @@ void UserInputManager::inbetweeningMenu(int id)
     glEndList ();
 }
 
-void UserInputManager::mouseFunc (int button, int state, int x, int y)
-/* This is the callback function that gets executed when a mouse button is pressed. */
-{
+void UserInputManager::mouseFunc (int button, int state, int x, int y) {
     if ((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN))
         if (pointsChosen == 0)
         {

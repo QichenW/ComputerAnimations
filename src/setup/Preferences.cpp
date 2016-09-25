@@ -21,12 +21,12 @@ void Preferences::setPointsSet(bool value) {
     pointsSet = value;
 }
 
-void Preferences::setInterpolationMode(int interpolationMode) {
-    interpolationMode = interpolationMode;
+void Preferences::setInterpolationMode(int mode) {
+    interpolationMode = mode;
 }
 
-void Preferences::setOrientationMode(int orientationMode) {
-    orientationMode = orientationMode;
+void Preferences::setOrientationMode(int mode) {
+    orientationMode = mode;
 }
 
 // getters

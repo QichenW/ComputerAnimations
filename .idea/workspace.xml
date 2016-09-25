@@ -16,19 +16,10 @@
     </ADDITIONAL_GENERATION_ENVIRONMENT>
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="20259426-4258-46ad-bf43-f6ced7870ffd" name="Default" comment="preference class done; cmake target dependencies problem fixed">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/setup/Preferences.cpp" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/setup/Preferences.h" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/porsche.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/rigged_hand.obj" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/data/teddy.obj" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/loader/SimpleObjLoader.cpp" afterPath="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/src/loader/SimpleObjLoader.h" afterPath="$PROJECT_DIR$/src/setup/SimpleObjLoader.h" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/glutProject.iml" afterPath="$PROJECT_DIR$/.idea/glutProject.iml" />
+    <list default="true" id="20259426-4258-46ad-bf43-f6ced7870ffd" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/StringUtils.cpp" afterPath="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/Preferences.cpp" afterPath="$PROJECT_DIR$/src/setup/Preferences.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/Preferences.h" afterPath="$PROJECT_DIR$/src/setup/Preferences.h" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/UserInputManager.cpp" afterPath="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/UserInputManager.h" afterPath="$PROJECT_DIR$/src/ui/UserInputManager.h" />
     </list>
@@ -53,59 +44,10 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
-              <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+            <state relative-caret-position="298">
+              <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
               <folding>
                 <element signature="e#94#122#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Preferences.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Preferences.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInputManager.h" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-              <folding>
-                <element signature="e#150#172#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="UserInputManager.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="435">
-              <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#58#0" expanded="true" />
-                <marker date="1474776758000" expanded="true" signature="307:365" ph="{...}" />
-                <marker date="1474776758000" expanded="true" signature="802:1141" ph="{...}" />
-                <marker date="1474776758000" expanded="true" signature="1246:1500" ph="{...}" />
-                <marker date="1474776758000" expanded="true" signature="1660:2210" ph="{...}" />
-                <marker date="1474776758000" expanded="true" signature="2253:2862" ph="{...}" />
               </folding>
             </state>
           </provider>
@@ -114,30 +56,32 @@
       <file leaf-file-name="SimpleObjLoader.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
+            <state relative-caret-position="-394">
               <caret line="9" column="46" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <file leaf-file-name="UserInputManager.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="748">
-              <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
-              <folding />
+            <state relative-caret-position="-121">
+              <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
+              <folding>
+                <element signature="e#40#58#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="StringUtils.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
+      <file leaf-file-name="UserInputManager.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.h">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="315">
-              <caret line="21" column="62" selection-start-line="21" selection-start-column="62" selection-end-line="21" selection-end-column="62" />
+              <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
               <folding>
-                <element signature="e#187#207#0" expanded="true" />
+                <element signature="e#150#172#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -184,12 +128,12 @@
         <option value="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
         <option value="$PROJECT_DIR$/src/setup/PreferenceManager.cpp" />
         <option value="$PROJECT_DIR$/src/setup/PreferenceManager.h" />
-        <option value="$PROJECT_DIR$/src/ui/UserInputManager.h" />
-        <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
-        <option value="$PROJECT_DIR$/src/setup/Preferences.h" />
-        <option value="$PROJECT_DIR$/src/setup/Preferences.cpp" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/setup/Preferences.h" />
+        <option value="$PROJECT_DIR$/src/setup/Preferences.cpp" />
+        <option value="$PROJECT_DIR$/src/ui/UserInputManager.h" />
+        <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
       </list>
     </option>
   </component>
@@ -556,7 +500,7 @@
       <workItem from="1474617465261" duration="72000" />
       <workItem from="1474649499035" duration="27488000" />
       <workItem from="1474744428299" duration="24787000" />
-      <workItem from="1474773279455" duration="7629000" />
+      <workItem from="1474773279455" duration="9429000" />
     </task>
     <task id="LOCAL-00001" summary="the matrix generator class is created">
       <created>1474572078187</created>
@@ -663,11 +607,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474766530813</updated>
     </task>
-    <option name="localTasksCounter" value="16" />
+    <task id="LOCAL-00016" summary="preference class done; cmake target dependencies problem fixed">
+      <created>1474781052292</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1474781052292</updated>
+    </task>
+    <option name="localTasksCounter" value="17" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="117679000" />
+    <option name="totallyTimeSpent" value="119479000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -741,13 +692,8 @@
           <line>20</line>
           <option name="timeStamp" value="106" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/setup/Preferences.cpp</url>
-          <line>11</line>
-          <option name="timeStamp" value="111" />
-        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="113" />
+      <option name="time" value="114" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -780,11 +726,6 @@
           <caret line="67" column="1" selection-start-line="67" selection-start-column="1" selection-end-line="67" selection-end-column="1" />
           <folding>
             <element signature="e#40#58#0" expanded="true" />
-            <marker date="1474776758000" expanded="true" signature="307:365" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="802:1141" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="1246:1500" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="1660:2210" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="2253:2862" ph="{...}" />
           </folding>
         </state>
       </provider>
@@ -1006,13 +947,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/stringUtils/CMakeLists.txt" />
-    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1041,41 +975,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="9" column="46" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="46" />
+        <state relative-caret-position="810">
+          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+    <entry file="file://$PROJECT_DIR$/src/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="116" column="0" selection-start-line="116" selection-start-column="0" selection-end-line="116" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#58#0" expanded="true" />
-            <marker date="1474776758000" expanded="true" signature="307:365" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="802:1141" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="1246:1500" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="1660:2210" ph="{...}" />
-            <marker date="1474776758000" expanded="true" signature="2253:2862" ph="{...}" />
-          </folding>
+        <state relative-caret-position="105">
+          <caret line="7" column="10" selection-start-line="7" selection-start-column="10" selection-end-line="7" selection-end-column="10" />
+          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+    <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="748">
-          <caret line="54" column="50" selection-start-line="54" selection-start-column="50" selection-end-line="54" selection-end-column="50" />
+        <state relative-caret-position="-394">
+          <caret line="9" column="46" selection-start-line="9" selection-start-column="38" selection-end-line="9" selection-end-column="46" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="19" column="5" selection-start-line="19" selection-start-column="5" selection-end-line="19" selection-end-column="5" />
+        <state relative-caret-position="298">
+          <caret line="70" column="0" selection-start-line="70" selection-start-column="0" selection-end-line="70" selection-end-column="0" />
           <folding>
             <element signature="e#94#122#0" expanded="true" />
           </folding>
@@ -1084,26 +1011,36 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="31" column="9" selection-start-line="31" selection-start-column="9" selection-end-line="31" selection-end-column="9" />
+        <state relative-caret-position="386">
+          <caret line="35" column="33" selection-start-line="35" selection-start-column="33" selection-end-line="35" selection-end-column="33" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+        <state relative-caret-position="450">
+          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+        <state relative-caret-position="315">
+          <caret line="21" column="39" selection-start-line="21" selection-start-column="39" selection-end-line="21" selection-end-column="39" />
           <folding>
             <element signature="e#150#172#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-121">
+          <caret line="73" column="71" selection-start-line="73" selection-start-column="71" selection-end-line="73" selection-end-column="71" />
+          <folding>
+            <element signature="e#40#58#0" expanded="true" />
           </folding>
         </state>
       </provider>

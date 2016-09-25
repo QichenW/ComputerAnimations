@@ -31,9 +31,9 @@ public:
 
     void setPointsSet(bool value);
 
-    void setInterpolationMode(int interpolationMode);
+    void setInterpolationMode(int mode);
 
-    void setOrientationMode(int orientationMode);
+    void setOrientationMode(int mode);
 
 
 };
