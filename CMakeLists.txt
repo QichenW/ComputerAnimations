@@ -3,19 +3,21 @@ project(glutProject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES main.cpp utils/SimpleObjLoader.cpp utils/SimpleObjLoader.h utils/MatrixGenerator.cpp utils/MatrixGenerator.h utils/UserInputManager.cpp utils/UserInputManager.h ui/UserInterfaceManager.cpp ui/UserInterfaceManager.h)
+set(SOURCE_FILES src/main.cpp src/loader/SimpleObjLoader.cpp src/loader/SimpleObjLoader.h src/matrix/MatrixGenerator.cpp src/matrix/MatrixGenerator.h src/ui/UserInputManager.cpp src/ui/UserInputManager.h src/ui/UserInterfaceManager.cpp src/ui/UserInterfaceManager.h)
 
 #########################################################
 # Include Files
 #########################################################
 include_directories(
-        ${CMAKE_CURRENT_SOURCE_DIR}/utils
-        ${CMAKE_CURRENT_SOURCE_DIR}/ui
+        ${CMAKE_CURRENT_SOURCE_DIR}/src
+        src/ui
+        src/loader
+        src/matrix
 )
 
-#include(utils/CMakeLists.txt ui/CMakeLists.txt)
+#include(src/CMakeLists.txt ui/CMakeLists.txt)
 add_executable (glutProject
-        main.cpp
+        src/main.cpp
         ${SOURCE_FILES})
 
 IF (APPLE)
