@@ -18,7 +18,8 @@ float objectRotation;
 int window;
 
 bool isQuaternion = false;
-static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
+static char* OBJECT_FILE_NAME = (char *) "teddy.obj";
+//static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 float eulerAngle[] = {45,45,45};
 float quaternion[4] = {};
@@ -38,8 +39,10 @@ void reshape(int w, int h) {
 void displayObject() {
     glLoadIdentity();
     glPushMatrix();
-    glTranslatef(0, (GLfloat) -40.00, -150);
-    glScalef(0.1, 0.1, 0.1);
+    //TODO replace these 2 lines with self written matrix calculation
+    glTranslatef(0, (GLfloat) 0.0, -150);
+    glScalef(1, 1, 1);
+    //glScalef(0.1, 0.1, 0.1);
     glColor3f(0.1, 0.45, 0.1);
     glRotatef(objectRotation, 0, 1, 0);
     glCallList(object);
@@ -50,8 +53,10 @@ void displayObject() {
 
 void drawFrame() {
     glPushMatrix();
-    glTranslatef(0, (GLfloat) -40.00, -150);
-    glScalef(0.1, 0.1, 0.1);
+    //TODO replace these 2 lines with self written matrix calculation
+    glTranslatef(0, (GLfloat) 0.0, -150);
+    glScalef(1, 1, 1);
+    //glScalef(0.1, 0.1, 0.1);
     glColor3f(0.1, 0.45, 0.1);
 
 // TODO the matrix goes here, quaternion version is not yet done
@@ -89,7 +94,6 @@ int main(int argc, char **argv) {
     glutReshapeFunc(reshape);
     glutDisplayFunc(display);
     glutIdleFunc(display);
-    //TODO fix this
     UserInputManager(&window, &prefs);
     glutKeyboardFunc(UserInputManager::keyboardFunc);
     glutMouseFunc(UserInputManager::mouseFunc);

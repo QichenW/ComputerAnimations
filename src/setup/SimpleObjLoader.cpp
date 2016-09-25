@@ -7,14 +7,13 @@
 
 using namespace std;
 
+FILE *filePointer;
+char lineHeader[128];
+vector<GLfloat> vx, vy,vz;
 GLuint SimpleObjLoader::loadObj(char *fileName) {
-    FILE *filePointer;
+
     GLfloat x, y, z;
     GLuint object;
-    char dump1, dump2;
-    unsigned long vIndex1, vIndex2, vIndex3, vnIndex;
-    vector<GLfloat> vx, vy,vz;
-    char lineHeader[128];
     object = glGenLists(1);
     filePointer = fopen(fileName, "r");
     if (!filePointer) {
@@ -43,8 +42,26 @@ GLuint SimpleObjLoader::loadObj(char *fileName) {
         filePointer = fopen(fileName, "r");
         glLineWidth(1.0);
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
-        glBegin(GL_TRIANGLES);
-        while (true) {
+        // record the polygons of an object in a
+        //TODO if is elephant.obj
+        //recordObjectAsTrianglesWithNoVt();
+        //TODO if is teddy.obj
+        recordObjectAsTrianglesWithNoVtNoVn();
+        fclose(filePointer);
+
+    glEndList();
+
+    return object;
+}
+
+/****
+ * This function can load a obj file with no texture vector and describing the object in triangles
+ */
+void SimpleObjLoader::recordObjectAsTrianglesWithNoVt() {
+    char dump1, dump2;
+    unsigned long vIndex1, vIndex2, vIndex3, vnIndex;
+    glBegin(GL_TRIANGLES);
+    while (true) {
             // %s ignores /r /0 /n in between lines
             if (fscanf(filePointer, "%s", lineHeader) == EOF) {
                 break;
@@ -59,10 +76,28 @@ GLuint SimpleObjLoader::loadObj(char *fileName) {
                 glVertex3f(vx.at(vIndex3 - 1), vy.at(vIndex3 - 1), vz.at(vIndex3 - 1));
             }
         }
-        glEnd();
-        fclose(filePointer);
+    glEnd();
+}
 
-    glEndList();
+/****
+ * This function can load a obj file with no texture vector, no normal vector and describing the object in triangles
+ */
+void SimpleObjLoader::recordObjectAsTrianglesWithNoVtNoVn() {
+    char dump1, dump2;
+    unsigned long vIndex1, vIndex2, vIndex3, vnIndex;
+    glBegin(GL_TRIANGLES);
+    while (true) {
+        // %s ignores /r /0 /n in between lines
+        if (fscanf(filePointer, "%s", lineHeader) == EOF) {
+            break;
+        }
+        if (strcmp(lineHeader, "f") == 0) {
 
-    return object;
+            fscanf(filePointer, "%lu %lu %lu", &vIndex1, &vIndex2, &vIndex3);
+            glVertex3f(vx.at(vIndex1 - 1), vy.at(vIndex1 - 1), vz.at(vIndex1 - 1));
+            glVertex3f(vx.at(vIndex2 - 1), vy.at(vIndex2 - 1), vz.at(vIndex2 - 1));
+            glVertex3f(vx.at(vIndex3 - 1), vy.at(vIndex3 - 1), vz.at(vIndex3 - 1));
+        }
+    }
+    glEnd();
 }

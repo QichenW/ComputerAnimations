@@ -20,6 +20,10 @@ class SimpleObjLoader
 {
 public:
     static GLuint loadObj(char *fileName);
+
+    static void recordObjectAsTrianglesWithNoVt();
+
+    static void recordObjectAsTrianglesWithNoVtNoVn();
 };
 
 #endif //GLUTPROJECT_SIMPLEOBJHEADER_H
