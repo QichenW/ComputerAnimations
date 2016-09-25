@@ -8,24 +8,22 @@
 
 GLuint indexOfMenuInList = 2;
 
-int pointsChosen,ySize,x1,y1;
-
+static int pointsChosen,ySize,x1,y1;
 static int* windowID;
+
 Preferences *prefsPointer;
+
 UserInputManager::UserInputManager(int * window, Preferences* preferences) {
     windowID = window;
     prefsPointer = preferences;
 }
 
-void UserInputManager::mainMenu (int id)
-/* This is the callback function for the main menu. */
-{
-    double lineWidth, color[4];
-
+void UserInputManager::mainMenu (int id){
     switch (id)
     {
-        case 1 : /* TODO reset default values */
-
+        //reset the preferences
+        case 1 :
+            (*prefsPointer).resetPreferences();
             break;
         case 2 : /* TODO start animation */
 
@@ -35,12 +33,13 @@ void UserInputManager::mainMenu (int id)
     }
 }
 
-void UserInputManager::orientationMenu(int id)
-/* This is the callback function for the color menu. */
-{
+void UserInputManager::orientationMenu(int id){
+    //Foolproof, do not respond if the status message does not suggest you to choose
+    if((*prefsPointer).areBothOptionSelected()){
+        return;
+    }
     glNewList (++indexOfMenuInList, GL_COMPILE_AND_EXECUTE);
-    switch (id)
-    {
+    switch (id) {
         case 1 :
             (*prefsPointer).setOrientationMode(EULER_ANGLE_MODE);
             break;
@@ -56,6 +55,10 @@ void UserInputManager::orientationMenu(int id)
 }
 
 void UserInputManager::inbetweeningMenu(int id) {
+    //Foolproof, do not respond if the status message does not suggest you to choose
+    if((*prefsPointer).areBothOptionSelected()){
+        return;
+    }
     glNewList (++indexOfMenuInList, GL_COMPILE_AND_EXECUTE);
     switch (id)
     {
@@ -94,11 +97,10 @@ void UserInputManager::mouseFunc (int button, int state, int x, int y) {
 }
 
 void UserInputManager::createMouseMenu() {
-    int orientation_menu, inbetweening_menu;
-    orientation_menu = glutCreateMenu(orientationMenu);
+    int orientation_menu = glutCreateMenu(orientationMenu);
     glutAddMenuEntry ("Euler Angle", 1);
     glutAddMenuEntry ("Quaternion", 2);
-    inbetweening_menu = glutCreateMenu(UserInputManager::inbetweeningMenu);
+    int inbetweening_menu = glutCreateMenu(UserInputManager::inbetweeningMenu);
     glutAddMenuEntry ("Catmul-Rom", 1);
     glutAddMenuEntry ("B-splines", 2);
     glutCreateMenu (UserInputManager::mainMenu);

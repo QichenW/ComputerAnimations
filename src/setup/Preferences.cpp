@@ -6,10 +6,7 @@
 
 
 Preferences::Preferences() {
-    keyFramesSet = false;
-    pointsSet = false;
-    interpolationMode = -1;
-    orientationMode = -1;
+    resetPreferences();
 }
 
 // setters
@@ -44,4 +41,15 @@ int Preferences::getInterpolationMode() {
 
 bool Preferences::arePointsSet() {
     return pointsSet;
+}
+
+bool Preferences::areBothOptionSelected() {
+    return (interpolationMode!=-1 && orientationMode!=-1);
+}
+
+void Preferences::resetPreferences() {
+    keyFramesSet = false;
+    pointsSet = false;
+    interpolationMode = -1;
+    orientationMode = -1;
 }

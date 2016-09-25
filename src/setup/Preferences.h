@@ -36,6 +36,9 @@ public:
     void setOrientationMode(int mode);
 
 
+    bool areBothOptionSelected();
+
+    void resetPreferences();
 };
 
 
