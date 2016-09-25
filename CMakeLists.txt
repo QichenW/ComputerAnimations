@@ -3,7 +3,7 @@ project(glutProject)
 
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
-set(SOURCE_FILES src/main.cpp src/loader/SimpleObjLoader.cpp src/loader/SimpleObjLoader.h src/matrix/MatrixGenerator.cpp src/matrix/MatrixGenerator.h src/ui/UserInputManager.cpp src/ui/UserInputManager.h src/ui/UserInterfaceManager.cpp src/ui/UserInterfaceManager.h)
+set(SOURCE_FILES src/main.cpp src/loader/SimpleObjLoader.cpp src/loader/SimpleObjLoader.h src/matrix/MatrixGenerator.cpp src/matrix/MatrixGenerator.h src/ui/UserInputManager.cpp src/ui/UserInputManager.h src/ui/StringUtils.cpp src/ui/StringUtils.h)
 
 #########################################################
 # Include Files

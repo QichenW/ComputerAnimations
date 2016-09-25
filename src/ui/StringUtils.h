@@ -14,7 +14,12 @@
 
 class UserInterfaceManager {
 public:
-    static void renderString(int interpolationChosen, int orientationChosen, bool arePointsSet);
+    static void renderStatusMessage(int interpolationChosen, int orientationChosen, bool arePointsSet);
+
+private:
+    static char* buildString(const char **pointer, int numberOfSegments);
+
+    static void printInWindow(char *strInfo, bool isStatusInfo);
 };
 
 

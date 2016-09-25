@@ -1,4 +1,4 @@
-//  Created by Qichen on 8/28/16.
+//  Created by Qichen on 9/17/16.
 //  Copyright © 2016 Qichen Wang. All rights reserved.
 //
 
@@ -6,7 +6,7 @@
 #include <MatrixGenerator.h>
 #include <UserInputManager.h>
 #include <SimpleObjLoader.h>
-#include <UserInterfaceManager.h>
+#include <StringUtils.h>
 
 using namespace std;
 
@@ -17,9 +17,8 @@ float objectRotation;
 int window;
 // orientationChosen    -1: not chosen, 0 : euler angle, 1 : quaternion
 // interpolationChosen  -1: not chosen, 0 : Catmull-Rom, 1 : B-spline
-int orientationChosen = 1, interpolationChosen = 0;
-bool arePointsSet = false;
-bool areKeyFramesSet =false, isQuaternion = false;
+int orientationChosen = 1, interpolationChosen = 1;
+bool arePointsSet = true, areKeyFramesSet =false, isQuaternion = false;
 static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 float eulerAngle[] = {45,45,45};
@@ -67,7 +66,7 @@ void display(void) {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 // TODO change the setup info char *
-    UserInterfaceManager::renderString(interpolationChosen,orientationChosen, arePointsSet);
+    UserInterfaceManager::renderStatusMessage(interpolationChosen, orientationChosen, arePointsSet);
     if(!areKeyFramesSet){
         displayObject();
     } else {
