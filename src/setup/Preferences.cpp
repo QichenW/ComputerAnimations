@@ -24,7 +24,7 @@ void Preferences::setOrientationMode(int mode) {
 }
 
 // getters
-bool Preferences::setKeyFrameLoaded() {
+bool Preferences::getKeyFrameLoaded() {
     return areKeyFramesLoaded;
 }
 

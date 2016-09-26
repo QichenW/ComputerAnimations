@@ -28,13 +28,13 @@ float* MatrixGenerator::generateFrameFromUserInput(float *tuple, float *trip, bo
         getHomogeneousFromEulerAngle(tuple);
     }
     // add the translation to transform matrix
-    transformationMatrix[3][0] += translationX;
-    transformationMatrix[3][1] += translationY;
-    transformationMatrix[3][2] += translationZ;
+    transformationMatrix[0][3] += translationX;
+    transformationMatrix[1][3] += translationY;
+    transformationMatrix[2][3] += translationZ;
 //    TODO debug only
-//    printTransformationMatrix();
+    printTransformationMatrix();
     /**
-     * openGL has column major matrix, but the flattened matrix looks like m[] below
+     * openGL has column major matrix (so my matrix should be transposed), the flattened matrix looks like m[] below
      * **/
 //    static float m[] ={ 1.0f, 0.0f, 0.0f, 0.0f,
 //                 0.0f, 1.0f, 0.0f, 0.0f,
@@ -43,7 +43,8 @@ float* MatrixGenerator::generateFrameFromUserInput(float *tuple, float *trip, bo
     int i,j;
     for(i = 0; i < 4; i++){
         for (j=0; j< 4; j++){
-            flattenedTransformationMatrix[i * 4 + j] = transformationMatrix[i][j];
+            //opengl needs column major matrix
+            flattenedTransformationMatrix[i * 4 + j] = transformationMatrix[j][i];
         }
     }
     return  flattenedTransformationMatrix;

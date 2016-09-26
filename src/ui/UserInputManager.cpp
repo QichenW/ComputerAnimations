@@ -125,6 +125,12 @@ void UserInputManager::createMouseMenu() {
 
 void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
     switch ((char) key) {
+        case 'a':
+            prefsPointer->setKeyFramesLoaded(true);
+            break;
+        case 'b':
+            prefsPointer->setKeyFramesLoaded(false);
+            break;
         case 'q':
         case 'Q':
         case 27:    /* ESC */

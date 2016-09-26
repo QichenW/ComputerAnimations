@@ -20,7 +20,8 @@ static char* OBJECT_FILE_NAME = (char *) "teddy.obj";
 //static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 float eulerAngle[] = {0,0,0};
-float trip[] = {100,0,0};
+float trip[] = {0,0,0};
+float increment = 0.5;
 
 void drawFrame();
 
@@ -44,7 +45,7 @@ void displayObject() {
     glRotatef(objectRotation, 0, 1, 0);
     glCallList(object);
     glPopMatrix();
-    objectRotation = objectRotation + (float) 0.6;
+    //objectRotation = objectRotation + (float) 0.6;
     if (objectRotation > 360)objectRotation = objectRotation - 360;
 }
 
@@ -58,6 +59,10 @@ void drawFrame() {
 
 // TODO the matrix goes here, quaternion version is not yet done
     glMultMatrixf(MatrixGenerator::generateFrameFromUserInput(eulerAngle, trip, isQuaternion));
+    if(trip[0] > 90 || trip[0] < 0) {
+        increment *= -1;
+    }
+    trip[0] += increment;
 
     glCallList(object);
     glPopMatrix();
@@ -68,8 +73,8 @@ void display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // the setup info char * on the bottom left corner on window
-    UserInterfaceManager::renderStatusMessage(prefs.setKeyFrameLoaded());
-    if(!prefs.setKeyFrameLoaded()){
+    UserInterfaceManager::renderStatusMessage(prefs.getKeyFrameLoaded());
+    if(!prefs.getKeyFrameLoaded()){
         displayObject();
     } else {
         drawFrame();

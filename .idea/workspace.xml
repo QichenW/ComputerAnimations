@@ -24,6 +24,9 @@
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp" afterPath="$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/Preferences.cpp" afterPath="$PROJECT_DIR$/src/setup/Preferences.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/Preferences.h" afterPath="$PROJECT_DIR$/src/setup/Preferences.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/UserInputManager.cpp" afterPath="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
     </list>
     <ignored path="glutProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -46,8 +49,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+            <state relative-caret-position="-784">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
               <folding>
                 <element signature="e#94#122#0" expanded="true" />
               </folding>
@@ -58,7 +61,7 @@
       <file leaf-file-name="Preferences.h" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="551">
+            <state relative-caret-position="825">
               <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
               <folding>
                 <element signature="e#144#166#0" expanded="true" />
@@ -71,8 +74,8 @@
       <file leaf-file-name="SimpleObjLoader.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="116">
-              <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+            <state relative-caret-position="236">
+              <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
               <folding>
                 <element signature="e#40#68#0" expanded="true" />
               </folding>
@@ -83,8 +86,8 @@
       <file leaf-file-name="Preferences.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
+            <state relative-caret-position="-107">
+              <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
               <folding>
                 <element signature="e#40#59#0" expanded="true" />
               </folding>
@@ -95,10 +98,22 @@
       <file leaf-file-name="MatrixGenerator.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1646">
-              <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+            <state relative-caret-position="630">
+              <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
               <folding>
-                <element signature="e#4147#4529#0" expanded="false" />
+                <element signature="e#4224#4606#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UserInputManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="295">
+              <caret line="131" column="50" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
+              <folding>
+                <element signature="e#40#58#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -151,14 +166,14 @@
         <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.h" />
         <option value="$PROJECT_DIR$/data/scenario_1.txt" />
         <option value="$PROJECT_DIR$/data/scenario_2.txt" />
-        <option value="$PROJECT_DIR$/src/setup/Preferences.cpp" />
         <option value="$PROJECT_DIR$/src/setup/Preferences.h" />
         <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.cpp" />
-        <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
         <option value="$PROJECT_DIR$/src/ui/UserInputManager.h" />
-        <option value="$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp" />
         <option value="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" />
+        <option value="$PROJECT_DIR$/src/setup/Preferences.cpp" />
+        <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp" />
       </list>
     </option>
   </component>
@@ -583,7 +598,7 @@
       <workItem from="1474649499035" duration="27488000" />
       <workItem from="1474744428299" duration="24787000" />
       <workItem from="1474773279455" duration="16884000" />
-      <workItem from="1474809817787" duration="31925000" />
+      <workItem from="1474809817787" duration="36661000" />
     </task>
     <task id="LOCAL-00001" summary="the matrix generator class is created">
       <created>1474572078187</created>
@@ -732,11 +747,18 @@
       <option name="project" value="LOCAL" />
       <updated>1474869049700</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="minor change">
+      <created>1474874382103</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1474874382103</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="158859000" />
+    <option name="totallyTimeSpent" value="163595000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -757,8 +779,8 @@
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -805,18 +827,12 @@
     <MESSAGE value="now have two available objects" />
     <MESSAGE value="native file dialog implemented, text display changed" />
     <MESSAGE value="setup file loader completed; Preferences refined" />
-    <option name="LAST_COMMIT_MESSAGE" value="setup file loader completed; Preferences refined" />
+    <MESSAGE value="minor change" />
+    <option name="LAST_COMMIT_MESSAGE" value="minor change" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp</url>
-          <line>49</line>
-          <option name="timeStamp" value="161" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="162" />
+      <option name="time" value="164" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -1072,16 +1088,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="184">
-          <caret line="125" column="66" selection-start-line="125" selection-start-column="66" selection-end-line="125" selection-end-column="66" />
-          <folding>
-            <element signature="e#40#58#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -1108,31 +1114,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="46" column="18" selection-start-line="46" selection-start-column="18" selection-end-line="46" selection-end-column="18" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
-          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
-          <folding>
-            <element signature="e#144#166#0" expanded="true" />
-            <element signature="e#210#230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="116">
-          <caret line="43" column="33" selection-start-line="43" selection-start-column="33" selection-end-line="43" selection-end-column="33" />
+        <state relative-caret-position="236">
+          <caret line="51" column="0" selection-start-line="51" selection-start-column="0" selection-end-line="51" selection-end-column="0" />
           <folding>
             <element signature="e#40#68#0" expanded="true" />
           </folding>
@@ -1141,18 +1126,49 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1646">
-          <caret line="146" column="0" selection-start-line="146" selection-start-column="0" selection-end-line="146" selection-end-column="0" />
+        <state relative-caret-position="630">
+          <caret line="45" column="46" selection-start-line="45" selection-start-column="46" selection-end-line="45" selection-end-column="46" />
           <folding>
-            <element signature="e#4147#4529#0" expanded="false" />
+            <element signature="e#4224#4606#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-107">
+          <caret line="26" column="19" selection-start-line="26" selection-start-column="19" selection-end-line="26" selection-end-column="19" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="295">
+          <caret line="131" column="50" selection-start-line="131" selection-start-column="50" selection-end-line="131" selection-end-column="50" />
+          <folding>
+            <element signature="e#40#58#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="55" column="0" selection-start-line="55" selection-start-column="0" selection-end-line="55" selection-end-column="0" />
+          <folding>
+            <element signature="e#144#166#0" expanded="true" />
+            <element signature="e#210#230#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" column="18" selection-start-line="22" selection-start-column="18" selection-end-line="22" selection-end-column="18" />
+        <state relative-caret-position="-784">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
           <folding>
             <element signature="e#94#122#0" expanded="true" />
           </folding>

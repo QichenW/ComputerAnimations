@@ -28,7 +28,7 @@ private:
 public:
     Preferences();
 
-    bool setKeyFrameLoaded();
+    bool getKeyFrameLoaded();
 
     int getOrientationMode();
 
