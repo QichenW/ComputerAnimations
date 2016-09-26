@@ -73,8 +73,8 @@ void display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // the setup info char * on the bottom left corner on window
-    UserInterfaceManager::renderStatusMessage(prefs.getKeyFrameLoaded());
-    if(!prefs.getKeyFrameLoaded()){
+    UserInterfaceManager::renderStatusMessage(prefs.getAreKeyFramesLoaded());
+    if(!prefs.getIsPlaying()){
         displayObject();
     } else {
         drawFrame();

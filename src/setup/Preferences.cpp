@@ -4,7 +4,7 @@
 
 #include <iostream>
 #include "Preferences.h"
-
+#include "InterpolationHelper.h"
 
 Preferences::Preferences() {
     resetPreferences();
@@ -24,7 +24,7 @@ void Preferences::setOrientationMode(int mode) {
 }
 
 // getters
-bool Preferences::getKeyFrameLoaded() {
+bool Preferences::getAreKeyFramesLoaded() {
     return areKeyFramesLoaded;
 }
 
@@ -38,6 +38,7 @@ int Preferences::getInterpolationMode() {
 
 void Preferences::resetPreferences() {
     areKeyFramesLoaded = false;
+    isPlaying = false;
     interpolationMode = -1;
     orientationMode = -1;
     keyFrameAmount = 0;
@@ -93,6 +94,28 @@ void Preferences::printLoadedPreferences() {
         cout<< '\n';
     }
 
+}
+
+void Preferences::setIsPlaying(bool i) {
+    isPlaying = i;
+}
+
+bool Preferences::getIsPlaying() {
+    return isPlaying;
+}
+
+//TODO get the coefficient matrices
+void Preferences::calculateCoefficientMatrices() {
+    // calculate the position coefficient matrix for t then store in translationCoefficientMatrix
+    InterpolationHelper::calculateCoefficientMatrix(translationCoefficientMatrix, basisCatmullMatrix,listOfPositions);
+    // calculate the euler angle coefficient matrix for t then store in translationCoefficientMatrix
+    if(orientationMode == 0) {
+        // if using euler angle
+        InterpolationHelper::calculateCoefficientMatrix(rotationCoefficientMatrix, basisCatmullMatrix,
+                                                        listOfEulerAngle);
+    } else if(orientationMode == 1) {
+        //TODO if using quaternion
+    }
 }
 
 

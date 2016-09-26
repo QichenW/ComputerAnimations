@@ -23,15 +23,18 @@ UserInputManager::UserInputManager(int * window, Preferences* preferences) {
 void UserInputManager::mainMenu (int id){
     switch (id)
     {
-        // choose the user provided text file in a "native file dialog"
-        case 1:
+        case 1: /* TODO  test if matrix is correct */
+            // choose the user provided text file in a "native file dialog"
             prefsPointer->setKeyFramesLoaded(loadUserInputFromFileDialog());
+            // then calculate the coefficient matrices for interpolation use
+            prefsPointer->calculateCoefficientMatrices();
             break;
         //reset the preferences
         case 2 :
-            (*prefsPointer).resetPreferences();
+            prefsPointer->resetPreferences();
             break;
-        case 3 : /* TODO start animation */
+        case 3 : /* TODO  test if start animation */
+            prefsPointer->setIsPlaying(true);
 
             break;
         default :
@@ -126,10 +129,10 @@ void UserInputManager::createMouseMenu() {
 void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
     switch ((char) key) {
         case 'a':
-            prefsPointer->setKeyFramesLoaded(true);
+            prefsPointer->setIsPlaying(true);
             break;
         case 'b':
-            prefsPointer->setKeyFramesLoaded(false);
+            prefsPointer->setIsPlaying(false);
             break;
         case 'q':
         case 'Q':

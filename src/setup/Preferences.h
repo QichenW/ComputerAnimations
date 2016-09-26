@@ -21,14 +21,19 @@ class Preferences {
     * // interpolationMode  -1: not chosen, 0 : Catmull-Rom, 1 : B-spline
     */
 private:
-    bool areKeyFramesLoaded;
+    const GLfloat basisCatmullMatrix[4][4] ={{(const GLfloat) -0.5, 1.5, (const GLfloat) -1.5, 0.5},
+                                             {1,                    (const GLfloat) -2.5, 2,  (const GLfloat) -0.5},
+                                             {(const GLfloat) -0.5, 0,                    0.5,   0},
+                                             {0, 1, 0, 0}};
+    GLfloat translationCoefficientMatrix[4][3] ={}, rotationCoefficientMatrix[4][3] ={};
+    bool areKeyFramesLoaded, isPlaying;
     int interpolationMode, orientationMode, keyFrameAmount;
     GLfloat **listOfPositions, **listOfEulerAngle, **listOfQuaternion;
 
 public:
     Preferences();
 
-    bool getKeyFrameLoaded();
+    bool getAreKeyFramesLoaded();
 
     int getOrientationMode();
 
@@ -51,6 +56,12 @@ public:
     void addOneEulerAngle(int index, GLfloat pitch, GLfloat yaw, GLfloat roll);
 
     void printLoadedPreferences();
+
+    void setIsPlaying(bool i);
+
+    bool getIsPlaying();
+
+    void calculateCoefficientMatrices();
 };
 
 

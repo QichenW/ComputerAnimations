@@ -7,7 +7,7 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -std=c++11")
 
 set(SOURCE_FILES src/main.cpp src/setup/SimpleObjLoader.cpp src/setup/SimpleObjLoader.h src/matrix/MatrixGenerator.cpp
         src/matrix/MatrixGenerator.h src/ui/UserInputManager.cpp src/ui/UserInputManager.h
-        src/ui/StringUtils.cpp src/ui/StringUtils.h src/setup/Preferences.cpp src/setup/Preferences.h src/setup/SetupFileLoader.cpp src/setup/SetupFileLoader.h)
+        src/ui/StringUtils.cpp src/ui/StringUtils.h src/setup/Preferences.cpp src/setup/Preferences.h src/setup/SetupFileLoader.cpp src/setup/SetupFileLoader.h src/matrix/InterpolationHelper.cpp src/matrix/InterpolationHelper.h)
 
 #########################################################
 # Include Files
