@@ -19,8 +19,8 @@ bool isQuaternion = false;
 static char* OBJECT_FILE_NAME = (char *) "teddy.obj";
 //static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
-float eulerAngle[] = {45,45,45};
-float trip[] = {50,-4,6};
+float eulerAngle[] = {0,0,0};
+float trip[] = {100,0,0};
 
 void drawFrame();
 

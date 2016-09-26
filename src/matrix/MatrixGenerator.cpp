@@ -54,7 +54,10 @@ void MatrixGenerator::getHomogeneousFromQuaternion(float *quaternion) {
 
 }
 
-
+/****
+ * This function generates a homogeneous matrix given the euler angle
+ * @param eulerAngle points to an array holding pith, yaw, roll
+ */
 void MatrixGenerator::getHomogeneousFromEulerAngle(float *eulerAngle) {
     /**
      * pitch, yaw, roll
@@ -117,7 +120,7 @@ void MatrixGenerator::applyRotation(float rotationMatrix[4][4]) {
 }
 
 /**
- * Initialize the Euler Angle matrices as identity matrices
+ * Initialize the Euler Angle pitch, yaw, roll matrices as identity matrices
  * **/
 void MatrixGenerator::initEulerAngleMatrices(float * matrix1, float * matrix2, float * matrix3) {
 
@@ -142,12 +145,15 @@ void MatrixGenerator::initTransformationMatrixAsIdentity() {
     }
 }
 
+/****
+ * for debug use only
+ */
 void MatrixGenerator::printTransformationMatrix() {
     int i,j;
     for(i = 0; i < 4; i++) {
         for (j =0; j< 4; j++){
             cout<< transformationMatrix[i][j];
-                cout <<" ";
+                cout <<"\t";
         }
         cout <<" "<<endl;
     }
