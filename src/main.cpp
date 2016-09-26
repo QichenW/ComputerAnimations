@@ -12,8 +12,6 @@ using namespace std;
 
 GLuint object;
 Preferences prefs;
-// TODO pitch, yaw, roll, x, y, z
-GLdouble KeyFrames[6][6];
 float objectRotation;
 int window;
 
@@ -22,8 +20,7 @@ static char* OBJECT_FILE_NAME = (char *) "teddy.obj";
 //static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 float eulerAngle[] = {45,45,45};
-float quaternion[4] = {};
-float trip[] = {300,0,0};
+float trip[] = {50,-4,6};
 
 void drawFrame();
 
@@ -71,8 +68,8 @@ void display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // the setup info char * on the bottom left corner on window
-    UserInterfaceManager::renderStatusMessage(prefs.areKeyFramesSet());
-    if(!prefs.areKeyFramesSet()){
+    UserInterfaceManager::renderStatusMessage(prefs.setKeyFrameLoaded());
+    if(!prefs.setKeyFrameLoaded()){
         displayObject();
     } else {
         drawFrame();

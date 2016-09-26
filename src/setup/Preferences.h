@@ -5,7 +5,15 @@
 #ifndef GLUTPROJECT_PREFERENCEMANAGER_H
 #define GLUTPROJECT_PREFERENCEMANAGER_H
 
+#if defined(__APPLE__)
+#include <GLUT/glut.h>
+#include <string>
+#include <vector>
 
+#else
+#include <GL/glut.h>
+#endif
+using namespace std;
 class Preferences {
     /****
     * mode:
@@ -13,32 +21,36 @@ class Preferences {
     * // interpolationMode  -1: not chosen, 0 : Catmull-Rom, 1 : B-spline
     */
 private:
-    bool keyFramesSet, pointsSet;
-    int interpolationMode, orientationMode;
+    bool areKeyFramesLoaded;
+    int interpolationMode, orientationMode, keyFrameAmount;
+    GLfloat **listOfPositions, **listOfEulerAngle, **listOfQuaternion;
 
 public:
     Preferences();
 
-    bool areKeyFramesSet();
+    bool setKeyFrameLoaded();
 
     int getOrientationMode();
 
     int getInterpolationMode();
 
-    bool arePointsSet();
-
-    void setKeyFramesSet(bool value);
-
-    void setPointsSet(bool value);
+    void setKeyFramesLoaded(bool value);
 
     void setInterpolationMode(int mode);
 
     void setOrientationMode(int mode);
 
-
-    bool areBothOptionSelected();
-
     void resetPreferences();
+
+    void setKeyFrameAmount(int i);
+
+    int getKeyFrameAmount() const;
+
+    void addOnePosition(int index, GLfloat x, GLfloat y, GLfloat z);
+
+    void addOneEulerAngle(int index, GLfloat pitch, GLfloat yaw, GLfloat roll);
+
+    void printLoadedPreferences();
 };
 
 

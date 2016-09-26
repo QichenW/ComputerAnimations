@@ -1,0 +1,30 @@
+
+n 4
+
+o 0
+
+i 1
+
+p 3 4 5
+p 7 8 2
+p 4 9 6
+p 2 4 1
+
+e 30 120 60
+e 45 45 60
+e 120 30 180
+e 270 180 150
+
+
+### lines start with "#" are comments; in-line comments are NOT supported.
+### First, note the number of key frames, using a line starting with 'n'
+### Second, provide n positions
+### 'p' is followed by three float numbers separated by space,
+### suggesting the x-y-z coordinates of a control point
+### there must be n entries
+### Then, provide n positions
+### 'e' is followed by three float numbers separated by space,
+### suggesting the pitch, yaw roll of a frame in degrees
+### there must be n entries
+### Then, choose the orientation presentation 0 -> euler angle; 1-> quaternion
+### Finally, choose the interpolation method 0 -> 3rd order Catmull-Rom; 1 -> 3rd order B-spline

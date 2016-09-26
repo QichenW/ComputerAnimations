@@ -16,10 +16,6 @@
 
 class UserInputManager {
 private:
-    static const int EULER_ANGLE_MODE = 0;
-    static const int QUATERNION_MODE = 1;
-    static const int CATMULL_ROM_MODE = 0;
-    static const int B_SPLINE_MODE = 1;
     static void mainMenu (int id);
 
 /** sub-menus not implemented for now **/
@@ -31,7 +27,7 @@ public:
     static void mouseFunc (int button, int state, int x, int y);
     static void keyboardFunc(unsigned char, int, int);
 
-    static int loadUserInputFromFileDialog();
+    static bool loadUserInputFromFileDialog();
 };
 
 

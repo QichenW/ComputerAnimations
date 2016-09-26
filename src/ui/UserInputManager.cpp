@@ -5,7 +5,7 @@
 #include <cstdlib>
 #include <setup/Preferences.h>
 #include <nfd.h>
-#include <cstdio>
+#include <setup/SetupFileLoader.h>
 #include "UserInputManager.h"
 
 GLuint indexOfMenuInList = 2;
@@ -23,9 +23,10 @@ UserInputManager::UserInputManager(int * window, Preferences* preferences) {
 void UserInputManager::mainMenu (int id){
     switch (id)
     {
-        // load the user provided json file in "native file dialog"
+        // choose the user provided text file in a "native file dialog"
         case 1:
-            loadUserInputFromFileDialog();
+            prefsPointer->setKeyFramesLoaded(loadUserInputFromFileDialog());
+            break;
         //reset the preferences
         case 2 :
             (*prefsPointer).resetPreferences();
@@ -124,12 +125,6 @@ void UserInputManager::createMouseMenu() {
 
 void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
     switch ((char) key) {
-        case 'a':
-            (*prefsPointer).setKeyFramesSet(true);
-            break;
-        case 'b':
-            (*prefsPointer).setKeyFramesSet(false);
-            break;
         case 'q':
         case 'Q':
         case 27:    /* ESC */
@@ -141,14 +136,20 @@ void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
     return;
 }
 
-int UserInputManager::loadUserInputFromFileDialog() {
+/****
+ *
+ * @return true if loaded; false if not
+ */
+bool UserInputManager::loadUserInputFromFileDialog() {
     nfdchar_t *outPath = NULL;
     nfdresult_t result = NFD_OpenDialog( NULL, NULL, &outPath );
 
     if ( result == NFD_OKAY ) {
+        SetupFileLoader::loadPreferencesFromTextFile(outPath, prefsPointer);
         puts("Success!");
         puts(outPath);
         free(outPath);
+        return true;
     }
     else if ( result == NFD_CANCEL ) {
         puts("User pressed cancel.");
@@ -157,5 +158,5 @@ int UserInputManager::loadUserInputFromFileDialog() {
         printf("Error: %s\n", NFD_GetError() );
     }
 
-    return 0;
+    return false;
 }
