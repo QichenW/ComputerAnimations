@@ -104,18 +104,21 @@ bool Preferences::getIsPlaying() {
     return isPlaying;
 }
 
-//TODO get the coefficient matrices
+/****
+ *  get the coefficient matrices
+ */
 void Preferences::calculateCoefficientMatrices() {
-    // calculate the position coefficient matrix for t then store in translationCoefficientMatrix
-    InterpolationHelper::calculateCoefficientMatrix(translationCoefficientMatrix, basisCatmullMatrix,listOfPositions);
-    // calculate the euler angle coefficient matrix for t then store in translationCoefficientMatrix
-    if(orientationMode == 0) {
-        // if using euler angle
-        InterpolationHelper::calculateCoefficientMatrix(rotationCoefficientMatrix, basisCatmullMatrix,
-                                                        listOfEulerAngle);
-    } else if(orientationMode == 1) {
-        //TODO if using quaternion
-    }
+
+    // calculate the position coefficient matrix for t
+    // then store in translationCoefficientMatrix
+    InterpolationHelper::calculateCoefficientMatrix(translationCoefficientMatrix, interpolationMode,
+                                                        listOfPositions);
+    // calculate the euler angle coefficient matrix for t
+    // then store in translationCoefficientMatrix
+    InterpolationHelper::calculateCoefficientMatrix(rotationCoefficientMatrix, interpolationMode,
+                                                            orientationMode, listOfEulerAngle);
+
+
 }
 
 
