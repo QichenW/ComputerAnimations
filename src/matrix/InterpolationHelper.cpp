@@ -3,6 +3,7 @@
 //
 
 #include <iostream>
+#include <cmath>
 #include "InterpolationHelper.h"
 
 static const GLfloat basisCatmullMatrix[4][4] = {
@@ -58,5 +59,43 @@ void InterpolationHelper::calculateCoefficientMatrix(GLfloat (*dest)[3], int int
     } else {
         //TODO implement the version for quaternion
     }
+
+}
+
+//TODO test this
+/****
+ * This function prepares the time vector
+ * @param tVector the address of the vector to store the time vector elements
+ * @param t the current time ranging from 0 to 1
+ */
+void InterpolationHelper::prepareTimeVector(GLfloat *tVector, GLfloat t) {
+    *tVector = (GLfloat) pow(t, 3);
+    *(tVector + 1) = (GLfloat) pow(t,2);
+    *(tVector + 2) = t;
+    *(tVector + 3) = 1;
+}
+
+//TODO test this
+/****
+ *
+ * @param trans the address of the vector to store translation vector
+ * @param tVector the time vector
+ * @param coefficientMatrix the coefficient matrix
+ */
+void InterpolationHelper::prepareTranslationOrEulerAngleVector(GLfloat *trans, GLfloat *tVector,
+                                                               GLfloat coefficientMatrix[4][3]) {
+    int i,j;
+    for(i = 0; i < 3; i++) {
+        *(trans + i) = 0;
+        for (j = 0; j < 4; j++) {
+            *(trans + i) += *(tVector + j) * (*(coefficientMatrix + j))[i];
+        }
+    }
+
+}
+
+//TODO implement this
+void
+InterpolationHelper::prepareQuaternionVector(GLfloat *quaternion, GLfloat *tVector, GLfloat (*coefficientMatrix)[4]) {
 
 }

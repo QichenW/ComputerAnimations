@@ -21,13 +21,17 @@ class Preferences {
     * // interpolationMode  -1: not chosen, 0 : Catmull-Rom, 1 : B-spline
     */
 private:
-    GLfloat translationCoefficientMatrix[4][3] ={}, rotationCoefficientMatrix[4][3] ={};
+    GLfloat timeProgress;
+
     bool areKeyFramesLoaded, isPlaying;
     int interpolationMode, orientationMode, keyFrameAmount;
     GLfloat **listOfPositions, **listOfEulerAngle, **listOfQuaternion;
 
 public:
     Preferences();
+    GLfloat translationCoefficientMatrix[4][3] ={};
+    GLfloat eulerRotationCoefficientMatrix[4][3] ={};
+    GLfloat quaterRotationCoefficientMatrix[4][4]={};
 
     bool getAreKeyFramesLoaded();
 
@@ -58,6 +62,10 @@ public:
     bool getIsPlaying();
 
     void calculateCoefficientMatrices();
+
+    GLfloat getTimeProgress();
+
+    void timeProceed(GLfloat d);
 };
 
 

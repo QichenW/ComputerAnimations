@@ -3,25 +3,22 @@
 //
 
 
-#include <MatrixGenerator.h>
+#include <RotationHelper.h>
 #include <UserInputManager.h>
 #include <SimpleObjLoader.h>
 #include <StringUtils.h>
+#include <matrix/InterpolationHelper.h>
 
 using namespace std;
 
 GLuint object;
 Preferences prefs;
-float objectRotation;
+GLfloat objectRotation, increment = 0.005;
+GLfloat tVector[4]={}, quaternion[4] = {}, eulerAngle[3] = {}, translation[3] = {};
 int window;
 
-bool isQuaternion = false;
 static char* OBJECT_FILE_NAME = (char *) "teddy.obj";
 //static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
-
-float eulerAngle[] = {0,0,0};
-float trip[] = {0,0,0};
-float increment = 0.5;
 
 void drawFrame();
 
@@ -45,7 +42,7 @@ void displayObject() {
     glRotatef(objectRotation, 0, 1, 0);
     glCallList(object);
     glPopMatrix();
-    //objectRotation = objectRotation + (float) 0.6;
+    objectRotation = objectRotation + (float) 0.6;
     if (objectRotation > 360)objectRotation = objectRotation - 360;
 }
 
@@ -57,12 +54,31 @@ void drawFrame() {
     //glScalef(0.1, 0.1, 0.1);
     glColor3f(0.1, 0.45, 0.1);
 
-// TODO the matrix goes here, quaternion version is not yet done
-    glMultMatrixf(MatrixGenerator::generateFrameFromUserInput(eulerAngle, trip, isQuaternion));
-    if(trip[0] > 90 || trip[0] < 0) {
-        increment *= -1;
+    // prepare the T vector for current time, then increment time.
+    if(prefs.getTimeProgress()<= 1.0){
+        InterpolationHelper::prepareTimeVector(tVector, prefs.getTimeProgress());
+        prefs.timeProceed(increment);
     }
-    trip[0] += increment;
+
+    // prepare the translation vector
+    InterpolationHelper::
+    prepareTranslationOrEulerAngleVector(translation, tVector, prefs.translationCoefficientMatrix);
+
+    if (prefs.getOrientationMode() == 0) {
+        // if getting euler angle version of animation
+        // prepare the euler angle vector
+        InterpolationHelper::
+        prepareTranslationOrEulerAngleVector(eulerAngle, tVector, prefs.eulerRotationCoefficientMatrix);
+        // move the object
+        glMultMatrixf(RotationHelper::generateFrameFromUserInput(eulerAngle, translation, false));
+    } else {
+        //TODO quaternion version is not done
+        // if getting quaternion version of animation
+        // prepare the quaternion vector
+        InterpolationHelper::prepareQuaternionVector(quaternion, tVector, prefs.quaterRotationCoefficientMatrix);
+        // move the object
+        glMultMatrixf(RotationHelper::generateFrameFromUserInput(quaternion, translation, true));
+    }
 
     glCallList(object);
     glPopMatrix();

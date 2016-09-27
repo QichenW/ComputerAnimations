@@ -42,6 +42,7 @@ void Preferences::resetPreferences() {
     interpolationMode = -1;
     orientationMode = -1;
     keyFrameAmount = 0;
+    timeProgress = 0;
 }
 
 
@@ -115,10 +116,16 @@ void Preferences::calculateCoefficientMatrices() {
                                                         listOfPositions);
     // calculate the euler angle coefficient matrix for t
     // then store in translationCoefficientMatrix
-    InterpolationHelper::calculateCoefficientMatrix(rotationCoefficientMatrix, interpolationMode,
+    InterpolationHelper::calculateCoefficientMatrix(eulerRotationCoefficientMatrix, interpolationMode,
                                                             orientationMode, listOfEulerAngle);
 
 
 }
 
+GLfloat Preferences::getTimeProgress() {
+    return timeProgress;
+}
 
+void Preferences::timeProceed(GLfloat d) {
+    timeProgress += d;
+}

@@ -13,7 +13,7 @@
 #include <GL/glut.h>
 #endif
 
-class MatrixGenerator
+class RotationHelper
 {
 public:
     static float* generateFrameFromUserInput(float *tuple, float *trip, bool isQuaternion);

@@ -23,6 +23,12 @@ public:
 
     static void calculateCoefficientMatrix(GLfloat (*dest)[3], int interpolationMode,
                                            int orientationMode, float **controlPoints);
+
+    static void prepareTimeVector(GLfloat *tVector, GLfloat t);
+
+    static void prepareTranslationOrEulerAngleVector(GLfloat *trans, GLfloat *tVector, GLfloat coefficientMatrix[4][3]);
+
+    static void prepareQuaternionVector(GLfloat quaternion[4], GLfloat tVector[4], GLfloat coefficientMatrix[4][4]);
 };
 
 

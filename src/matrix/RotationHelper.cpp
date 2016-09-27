@@ -2,7 +2,7 @@
 // Created by Qichen on 9/22/16.
 //
 
-#include "MatrixGenerator.h"
+#include "RotationHelper.h"
 /* sine cosine */
 #include <math.h>
 #include <algorithm>
@@ -16,7 +16,7 @@ static float flattenedTransformationMatrix[16] ={};
 /**
  * @parm is either a quaternion or a vector suggesting Euler Angle
  * **/
-float* MatrixGenerator::generateFrameFromUserInput(float *tuple, float *trip, bool isQuaternion){
+float* RotationHelper::generateFrameFromUserInput(float *tuple, float *trip, bool isQuaternion){
     float translationX = *trip;
     float translationY = *(trip + 1);
     float translationZ = *(trip + 2);
@@ -51,7 +51,7 @@ float* MatrixGenerator::generateFrameFromUserInput(float *tuple, float *trip, bo
 }
 
 //TODO write the function
-void MatrixGenerator::getHomogeneousFromQuaternion(float *quaternion) {
+void RotationHelper::getHomogeneousFromQuaternion(float *quaternion) {
 
 }
 
@@ -59,7 +59,7 @@ void MatrixGenerator::getHomogeneousFromQuaternion(float *quaternion) {
  * This function generates a homogeneous matrix given the euler angle
  * @param eulerAngle points to an array holding pith, yaw, roll
  */
-void MatrixGenerator::getHomogeneousFromEulerAngle(float *eulerAngle) {
+void RotationHelper::getHomogeneousFromEulerAngle(float *eulerAngle) {
     /**
      * pitch, yaw, roll
      * */
@@ -104,7 +104,7 @@ void MatrixGenerator::getHomogeneousFromEulerAngle(float *eulerAngle) {
 /**
  * matrices multiplication
  * **/
-void MatrixGenerator::applyRotation(float rotationMatrix[4][4]) {
+void RotationHelper::applyRotation(float rotationMatrix[4][4]) {
     // temporarily hold the result
     float tempMatrix[4][4] ={};
     int i,j,m;
@@ -123,7 +123,7 @@ void MatrixGenerator::applyRotation(float rotationMatrix[4][4]) {
 /**
  * Initialize the Euler Angle pitch, yaw, roll matrices as identity matrices
  * **/
-void MatrixGenerator::initEulerAngleMatrices(float * matrix1, float * matrix2, float * matrix3) {
+void RotationHelper::initEulerAngleMatrices(float * matrix1, float * matrix2, float * matrix3) {
 
     std::copy(&transformationMatrix[0][0], &transformationMatrix[0][0] + 16, matrix1);
     std::copy(&transformationMatrix[0][0], &transformationMatrix[0][0] + 16, matrix2);
@@ -133,7 +133,7 @@ void MatrixGenerator::initEulerAngleMatrices(float * matrix1, float * matrix2, f
 /**
  * Initialize the transformation matrix as an identity matrix
  * **/
-void MatrixGenerator::initTransformationMatrixAsIdentity() {
+void RotationHelper::initTransformationMatrixAsIdentity() {
     int i,j;
     for(i = 0; i < 4; i++) {
         for (j =0; j< 4; j++){
@@ -149,7 +149,7 @@ void MatrixGenerator::initTransformationMatrixAsIdentity() {
 /****
  * for debug use only
  */
-void MatrixGenerator::printTransformationMatrix() {
+void RotationHelper::printTransformationMatrix() {
     int i,j;
     for(i = 0; i < 4; i++) {
         for (j =0; j< 4; j++){
