@@ -129,3 +129,8 @@ GLfloat Preferences::getTimeProgress() {
 void Preferences::timeProceed(GLfloat d) {
     timeProgress += d;
 }
+
+void Preferences::resetTimeProgress() {
+    timeProgress = 0;
+
+}

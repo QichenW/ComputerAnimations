@@ -66,6 +66,8 @@ public:
     GLfloat getTimeProgress();
 
     void timeProceed(GLfloat d);
+
+    void resetTimeProgress();
 };
 
 

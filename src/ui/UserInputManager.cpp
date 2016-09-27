@@ -23,7 +23,7 @@ UserInputManager::UserInputManager(int * window, Preferences* preferences) {
 void UserInputManager::mainMenu (int id){
     switch (id)
     {
-        case 1: /* TODO  test if matrix is correct */
+        case 1:
             // choose the user provided text file in a "native file dialog"
             prefsPointer->setKeyFramesLoaded(loadUserInputFromFileDialog());
             // then calculate the coefficient matrices for interpolation use
@@ -33,9 +33,13 @@ void UserInputManager::mainMenu (int id){
         case 2 :
             prefsPointer->resetPreferences();
             break;
-        case 3 : /* TODO  test if start animation */
+        case 3 :
+            if (!prefsPointer->getAreKeyFramesLoaded()){
+                /* TODO  show a message to let user load file first */
+                break;
+            }
+            prefsPointer->resetTimeProgress();
             prefsPointer->setIsPlaying(true);
-
             break;
         default :
             break;

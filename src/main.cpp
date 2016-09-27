@@ -99,7 +99,7 @@ void display(void) {
 
 }
 /**
- * openGL works in a left-handed coordinate system by default
+ * openGL works in a right-handed coordinate system by default
  * **/
 int main(int argc, char **argv) {
     // initiate an instance of prefs to store the user preference
