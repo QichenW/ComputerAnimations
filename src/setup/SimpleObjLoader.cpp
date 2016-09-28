@@ -41,9 +41,9 @@ GLuint SimpleObjLoader::loadObj(char *fileName) {
         glLineWidth(1.0);
         glPolygonMode(GL_FRONT_AND_BACK, GL_LINE);
         // record the polygons of an object in a
-        //TODO if is elephant.obj
+        //if is a file without only vt, like in elephant.obj
         //recordObjectAsTrianglesWithNoVt();
-        //TODO if is teddy.obj
+        //if is a file without vt and vn, like in teddy.obj
         recordObjectAsTrianglesWithNoVtNoVn();
     glEndList();
     fclose(filePointer);

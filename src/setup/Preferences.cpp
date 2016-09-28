@@ -5,6 +5,7 @@
 #include <iostream>
 #include "Preferences.h"
 #include "InterpolationHelper.h"
+#include "QuaternionConverter.h"
 
 Preferences::Preferences() {
     resetPreferences();
@@ -50,7 +51,7 @@ void Preferences::setKeyFrameAmount(int i) {
     keyFrameAmount = i;
     listOfPositions = new GLfloat*[i];
     listOfEulerAngle = new GLfloat*[i];
-    listOfQuaternion = new GLfloat*[i];
+    //listOfQuaternion = new GLfloat*[i];
 }
 
 int Preferences::getKeyFrameAmount() const {
@@ -112,13 +113,21 @@ void Preferences::calculateCoefficientMatrices() {
 
     // calculate the position coefficient matrix for t
     // then store in translationCoefficientMatrix
-    InterpolationHelper::calculateCoefficientMatrix(translationCoefficientMatrix, interpolationMode,
-                                                        listOfPositions);
-    // calculate the euler angle coefficient matrix for t
-    // then store in translationCoefficientMatrix
-    InterpolationHelper::calculateCoefficientMatrix(eulerRotationCoefficientMatrix, interpolationMode,
-                                                            orientationMode, listOfEulerAngle);
+    InterpolationHelper::calculate3dCoefficientMatrix(translationCoefficientMatrix, interpolationMode,
+                                                      listOfPositions);
 
+    if (orientationMode == 0) {
+        // calculate the euler angle coefficient matrix for t
+        // then store in translationCoefficientMatrix
+        InterpolationHelper::calculate3dCoefficientMatrix(eulerRotationCoefficientMatrix, interpolationMode,
+                                                          listOfEulerAngle);
+    } else {
+        //convert the user-provided euler angles to quaternions
+        QuaternionConverter::eulerAngleToQuaternion(listOfQuaternion, listOfEulerAngle);
+        //TODO then get the quaternion version of coefficient matrix
+        InterpolationHelper::calculate4dCoefficientMatrix(quaterRotationCoefficientMatrix, interpolationMode,
+                                                          listOfQuaternion);
+    }
 
 }
 

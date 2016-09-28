@@ -25,7 +25,7 @@ private:
 
     bool areKeyFramesLoaded, isPlaying;
     int interpolationMode, orientationMode, keyFrameAmount;
-    GLfloat **listOfPositions, **listOfEulerAngle, **listOfQuaternion;
+    GLfloat **listOfPositions, **listOfEulerAngle, listOfQuaternion[4][4];
 
 public:
     Preferences();
