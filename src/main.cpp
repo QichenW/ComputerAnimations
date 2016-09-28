@@ -70,14 +70,14 @@ void drawFrame() {
         InterpolationHelper::
         prepareTranslationOrEulerAngleVector(eulerAngle, tVector, prefs.eulerRotationCoefficientMatrix);
         // move the object
-        glMultMatrixf(RotationHelper::generateFrameFromUserInput(eulerAngle, translation, false));
+        glMultMatrixf(RotationHelper::generateFlattenedTransformationMatrix(eulerAngle, translation, false));
     } else {
         // if getting quaternion version of animation
         // prepare the quaternion vector
         InterpolationHelper::prepareQuaternionVector(quaternion, tVector, prefs.quaterRotationCoefficientMatrix);
         // move the object
         //TODO quaternion version of rotation matrix is not done
-        glMultMatrixf(RotationHelper::generateFrameFromUserInput(quaternion, translation, true));
+        glMultMatrixf(RotationHelper::generateFlattenedTransformationMatrix(quaternion, translation, true));
     }
 
     glCallList(object);

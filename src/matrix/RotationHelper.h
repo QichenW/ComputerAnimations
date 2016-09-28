@@ -16,7 +16,7 @@
 class RotationHelper
 {
 public:
-    static float* generateFrameFromUserInput(float *tuple, float *trip, bool isQuaternion);
+    static float* generateFlattenedTransformationMatrix(float *tuple, float *trip, bool isQuaternion);
 
 private:
     static void getHomogeneousFromEulerAngle(float *eulerAngle);

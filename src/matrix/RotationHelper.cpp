@@ -16,10 +16,12 @@ static float flattenedTransformationMatrix[16] ={};
 /**
  * @parm is either a quaternion or a vector suggesting Euler Angle
  * **/
-float* RotationHelper::generateFrameFromUserInput(float *tuple, float *trip, bool isQuaternion){
+float* RotationHelper::generateFlattenedTransformationMatrix(float *tuple, float *trip, bool isQuaternion){
     float translationX = *trip;
     float translationY = *(trip + 1);
     float translationZ = *(trip + 2);
+    // initialize the transformation matrix as identity matrix then multiply it with three rotation
+    // matrices for euler angle approach; 1 matrix for quaternion approach
     initTransformationMatrixAsIdentity();
 
     if(isQuaternion){
@@ -50,8 +52,39 @@ float* RotationHelper::generateFrameFromUserInput(float *tuple, float *trip, boo
     return  flattenedTransformationMatrix;
 }
 
-//TODO write the function
+//TODO test the function
+/****
+ * Hard coded
+ * get the homogenuous matrix for quaternion approach, store it in the global variable transformationMatrix
+ * @param quaternion must be NORMALIZED before
+ */
 void RotationHelper::getHomogeneousFromQuaternion(float *quaternion) {
+    GLfloat quaternionRotationMatrix[4][4] = {};
+    GLfloat twoXsqure = (GLfloat) pow(*(quaternion + 1), 2) * 2;
+    GLfloat twoYsqure = (GLfloat) pow(*(quaternion + 2), 2) * 2;
+    GLfloat twoZsqure = (GLfloat) pow(*(quaternion + 3), 2) * 2;
+    GLfloat twoxy = *(quaternion + 1) * (*(quaternion + 2)) * 2;
+    GLfloat twoxz = *(quaternion + 1) * (*(quaternion + 3)) * 2;
+    GLfloat twoyz = *(quaternion + 2) * (*(quaternion + 3)) * 2;
+    GLfloat twowx = *quaternion * (*(quaternion + 1)) * 2;
+    GLfloat twowy = *quaternion * (*(quaternion + 2)) * 2;
+    GLfloat twowz = *quaternion * (*(quaternion + 3)) * 2;
+
+    quaternionRotationMatrix[0][0] = 1 - twoYsqure - twoZsqure;
+    quaternionRotationMatrix[0][1] = twoxy - twowz;
+    quaternionRotationMatrix[0][2] = twoxz + twowy;
+    quaternionRotationMatrix[1][0] = twoxy + twowz;
+    quaternionRotationMatrix[1][1] = 1 - twoXsqure - twoZsqure;
+    quaternionRotationMatrix[1][2] = twoyz - twowx;
+    quaternionRotationMatrix[2][0] = twoxz - twowy;
+    quaternionRotationMatrix[2][1] = twoyz + twowx;
+    quaternionRotationMatrix[2][2] = 1 - twoXsqure - twoYsqure;
+    quaternionRotationMatrix[3][3] = 1;
+
+    // multiply the transformation matrix with the rotation matrix
+    applyRotation(quaternionRotationMatrix);
+    //TODO debug only
+    printTransformationMatrix();
 
 }
 
