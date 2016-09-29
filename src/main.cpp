@@ -13,7 +13,7 @@ using namespace std;
 
 GLuint object;
 Preferences prefs;
-GLfloat objectRotation, increment = 0.005;
+GLfloat displayRotationVector[3] = {}, increment = 0.005;
 GLfloat tVector[4]={}, quaternion[4] = {}, eulerAngle[3] = {}, translation[3] = {};
 int window;
 
@@ -30,27 +30,33 @@ void reshape(int w, int h) {
     glMatrixMode(GL_MODELVIEW);
 }
 
+/***
+ * display the object when idle
+ */
 void displayObject() {
     glLoadIdentity();
     glPushMatrix();
-    //TODO replace these 2 lines with self written matrix calculation
-    glTranslatef(0, (GLfloat) 0.0, -150);
-    glScalef(1, 1, 1);
-    //glScalef(0.1, 0.1, 0.1);
+    //move the model view away from the camera, so that we are not inside the object
+    glMultMatrixf((GLfloat []){1,0,0,0,0,1,0,0,0,0,1,0,0,0,-150,1});
     glColor3f(0.1, 0.45, 0.1);
-    glRotatef(objectRotation, 0, 1, 0);
+    //Rotate the object
+    glMultMatrixf(RotationHelper::generateFlattenedTransformationMatrix(
+            displayRotationVector, (GLfloat []){0,0,0}, false));
     glCallList(object);
     glPopMatrix();
-    objectRotation = objectRotation + (float) 0.6;
-    if (objectRotation > 360)objectRotation = objectRotation - 360;
+    displayRotationVector[1] += (GLfloat) 0.6;
+    if (displayRotationVector[1] > 360) {
+        displayRotationVector[1] -= 360;
+    }
 }
 
+/****
+ * This function is for drawing the frames in the interpolated animation.
+ */
 void drawFrame() {
     glPushMatrix();
-    //TODO replace these 2 lines with self written matrix calculation
-    glTranslatef(0, (GLfloat) 0.0, -150);
-    glScalef(1, 1, 1);
-    //glScalef(0.1, 0.1, 0.1);
+    //move the model view away from the camera, so that we are not inside the object
+    glMultMatrixf((GLfloat []){1,0,0,0,0,1,0,0,0,0,1,0,0,0,-150,1});
     glColor3f(0.1, 0.45, 0.1);
 
     // prepare the T vector for current time, then increment time.
@@ -74,10 +80,10 @@ void drawFrame() {
         // if getting quaternion version of animation
         // prepare the quaternion vector
         InterpolationHelper::prepareQuaternionVector(quaternion, tVector, prefs.quaterRotationCoefficientMatrix);
-        // move the object
+        // move and rotate the object
         glMultMatrixf(RotationHelper::generateFlattenedTransformationMatrix(quaternion, translation, true));
     }
-
+    // draw the faces of the object
     glCallList(object);
     glPopMatrix();
 }
@@ -86,7 +92,8 @@ void display(void) {
     glClearColor(0.0, 0.0, 0.0, 1.0);
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
-    // the setup info char * on the bottom left corner on window
+    // the setup info char * on the bottom left corner on window when it is idle,
+    // or the type of animation when playing animation
     UserInterfaceManager::renderStatusMessage(
             prefs.getOrientationMode(), prefs.getInterpolationMode(), prefs.getIsPlaying());
     if(!prefs.getIsPlaying()){
@@ -114,9 +121,8 @@ int main(int argc, char **argv) {
     glutKeyboardFunc(UserInputManager::keyboardFunc);
     glutMouseFunc(UserInputManager::mouseFunc);
     object = SimpleObjLoader::loadObj(OBJECT_FILE_NAME);
-    /* Create the menu structure and attach it to the right mouse button. */
+    // Create the menu structure and attach it to the right mouse button
     UserInputManager::createMouseMenu();
-
     glutMainLoop();
     return 0;
 }

@@ -8,9 +8,6 @@
 #include <setup/SetupFileLoader.h>
 #include "UserInputManager.h"
 
-GLuint indexOfMenuInList = 2;
-
-static int pointsChosen,ySize,x1,y1;
 static int* windowID;
 
 Preferences *prefsPointer;
@@ -30,9 +27,11 @@ void UserInputManager::setMouseMenuBehavior(int id){
     {
         case 1:
             // choose the user provided text file in a "native file dialog"
-            prefsPointer->setKeyFramesLoaded(loadUserInputFromFileDialog());
-            // then calculate the coefficient matrices for interpolation use
-            prefsPointer->calculateCoefficientMatrices();
+            if (loadUserInputFromFileDialog()) {
+                prefsPointer->setKeyFramesLoaded(true);
+                // then calculate the coefficient matrices for interpolation use
+                prefsPointer->calculateCoefficientMatrices();
+            }
             break;
         //reset the preferences
         case 2 :

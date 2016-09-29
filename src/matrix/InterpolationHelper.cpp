@@ -138,12 +138,14 @@ InterpolationHelper::prepareQuaternionVector(GLfloat *quaternion, GLfloat *tVect
             *(quaternion + i) += *(tVector + j) * (*(coefficientMatrix + j))[i];
         }
     }
-    cout<< "the magnitude before is " <<QuaternionConverter::getMagnitudeOfQuaternion(quaternion)<< endl;
+    //For debug only
+    //cout<< "the magnitude before is " <<QuaternionConverter::getMagnitudeOfQuaternion(quaternion)<< endl;
 
     // normalize the quaternion before using it to generate transformation matrix
     GLfloat magnitude = QuaternionConverter::getMagnitudeOfQuaternion(quaternion);
     for(i = 0; i < QUATERNION_DIMENSION; i++){
         *(quaternion + i) /= magnitude;
     }
-    cout<< "the magnitude after is " <<QuaternionConverter::getMagnitudeOfQuaternion(quaternion)<< endl;
+    //For debug only
+    //cout<< "the magnitude after is " <<QuaternionConverter::getMagnitudeOfQuaternion(quaternion)<< endl;
 }
