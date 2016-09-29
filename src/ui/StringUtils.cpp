@@ -7,18 +7,34 @@
 #include "StringUtils.h"
 
 static const char * strReqestMouseInput ="Right click and load a setup (.txt) file";
-static const char *strFileLoaded ="Setup file is loaded, right click to start animation or reset";
+static const char *strFileLoaded =" approach loaded, start animation or reset";
+static const char *strCatmull ="Catmull-Rom";
+static const char *strBspline ="B-Spline";
+static const char *strEuler ="Euler Angle & ";
+static const char *strQuaternion ="Quaternion & ";
 static char *strStatusInfo;
 
-
-void UserInterfaceManager::renderStatusMessage(bool areKeyFramesSet) {
-
-    if (areKeyFramesSet){
-            strStatusInfo = buildString((const char *[]) {strFileLoaded}, 1);
+void UserInterfaceManager::renderStatusMessage(int orientationMode, int interpolationMode, bool isPlaying) {
+    int numberOfStrs;
+    if (orientationMode == -1 || interpolationMode == -1){
+            strStatusInfo = buildString((const char *[]) {strReqestMouseInput}, 1);
+    } else {
+        numberOfStrs = isPlaying ? 2 : 3;
+        if(orientationMode == 0) {
+            if(interpolationMode == 0) {
+                strStatusInfo = buildString((const char *[]) {strEuler, strCatmull, strFileLoaded}, numberOfStrs);
+            } else {
+                strStatusInfo = buildString((const char *[]) {strEuler, strBspline, strFileLoaded}, numberOfStrs);
+            }
         } else {
-        strStatusInfo = buildString((const char *[]) {strReqestMouseInput}, 1);
+            if(interpolationMode == 0) {
+                strStatusInfo = buildString((const char *[]) {strQuaternion, strCatmull, strFileLoaded}, numberOfStrs);
+            } else {
+                strStatusInfo = buildString((const char *[]) {strQuaternion, strBspline, strFileLoaded}, numberOfStrs);
+            }
+        }
     }
-    printInWindow(strStatusInfo, true);
+    printInWindow(strStatusInfo, !isPlaying);
 }
 
 /***
@@ -27,13 +43,13 @@ void UserInterfaceManager::renderStatusMessage(bool areKeyFramesSet) {
  * @param isStatusInfo true to print in the lower line; false to print in the upper line.
  */
 void UserInterfaceManager::printInWindow(char *strInfo, bool isStatusInfo) {
-    int x, y;
+    int x, y; // position in the window
     if (isStatusInfo) {
-        x = 10;
-        y = 10;
+        x = 20;
+        y = 20;
     } else {
-        x = 0;
-        y = 0;
+        x = 540;
+        y = 100;
     }
 //set the text position in the window and color
     glWindowPos2f(x,y);

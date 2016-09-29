@@ -21,12 +21,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20259426-4258-46ad-bf43-f6ced7870ffd" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/data/scenario_4.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_1.txt" afterPath="$PROJECT_DIR$/data/1_Euler-Catmull.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_2.txt" afterPath="$PROJECT_DIR$/data/3_Euler-B_spline.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_3.txt" afterPath="$PROJECT_DIR$/data/2_Quaternion-Catmull.txt" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_4.txt" afterPath="$PROJECT_DIR$/data/4_Quaternion-B_spline.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/data/scenario_3.txt" afterPath="$PROJECT_DIR$/data/scenario_3.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" afterPath="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matrix/RotationHelper.h" afterPath="$PROJECT_DIR$/src/matrix/RotationHelper.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/StringUtils.cpp" afterPath="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/StringUtils.h" afterPath="$PROJECT_DIR$/src/ui/StringUtils.h" />
     </list>
     <ignored path="glutProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -49,8 +51,8 @@
       <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="202">
-              <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
+            <state relative-caret-position="370">
+              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
               <folding>
                 <element signature="e#94#121#0" expanded="true" />
               </folding>
@@ -58,80 +60,58 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Preferences.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
+      <file leaf-file-name="UserInputManager.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="127" column="89" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="89" />
-              <folding>
-                <element signature="e#40#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Preferences.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-214">
-              <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
-              <folding>
-                <element signature="e#144#166#0" expanded="true" />
-                <element signature="e#210#230#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterpolationHelper.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-              <folding>
-                <element signature="e#148#170#0" expanded="true" />
-                <element signature="e#214#234#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="QuaternionConverter.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matrix/QuaternionConverter.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="20" column="67" selection-start-line="20" selection-start-column="67" selection-end-line="20" selection-end-column="67" />
-              <folding>
-                <element signature="e#185#205#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="InterpolationHelper.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="412">
-              <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-              <folding>
-                <element signature="e#40#59#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="RotationHelper.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+            <state relative-caret-position="266">
+              <caret line="160" column="52" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scenario_3.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/scenario_3.txt">
+      <file leaf-file-name="SetupFileLoader.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/setup/SetupFileLoader.cpp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="330">
+              <caret line="38" column="46" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="46" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="1_Euler-Catmull.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/1_Euler-Catmull.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="3_Euler-B_spline.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/3_Euler-B_spline.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="2_Quaternion-Catmull.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/2_Quaternion-Catmull.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="4_Quaternion-B_spline.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/data/4_Quaternion-B_spline.txt">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="450">
               <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
@@ -140,24 +120,22 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="scenario_4.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/scenario_4.txt">
+      <file leaf-file-name="StringUtils.cpp" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
+            <state relative-caret-position="343">
+              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="QuaternionConverter.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp">
+      <file leaf-file-name="StringUtils.h" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="356">
-              <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="100" />
-              <folding>
-                <element signature="e#40#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="240">
+              <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -173,7 +151,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Guy.cpp" />
         <option value="$PROJECT_DIR$/src/Guy.h" />
         <option value="$PROJECT_DIR$/src/Shy.cpp" />
         <option value="$PROJECT_DIR$/src/Cool.h" />
@@ -203,16 +180,12 @@
         <option value="$PROJECT_DIR$/src/setup/SimpleObjLoader.h" />
         <option value="$PROJECT_DIR$/nfd/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/src/ui/StringUtils.h" />
-        <option value="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
         <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.h" />
         <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.cpp" />
         <option value="$PROJECT_DIR$/src/ui/UserInputManager.h" />
         <option value="$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp" />
         <option value="$PROJECT_DIR$/src/matrix/MatrixGenerator.h" />
         <option value="$PROJECT_DIR$/src/matrix/RotationHelper.h" />
-        <option value="$PROJECT_DIR$/data/scenario_1.txt" />
-        <option value="$PROJECT_DIR$/data/scenario_2.txt" />
         <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
         <option value="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" />
         <option value="$PROJECT_DIR$/src/setup/Preferences.h" />
@@ -221,9 +194,14 @@
         <option value="$PROJECT_DIR$/src/matrix/QuaternionConverter.h" />
         <option value="$PROJECT_DIR$/src/matrix/InterpolationHelper.h" />
         <option value="$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
         <option value="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" />
+        <option value="$PROJECT_DIR$/data/scenario_1.txt" />
         <option value="$PROJECT_DIR$/data/scenario_3.txt" />
+        <option value="$PROJECT_DIR$/data/scenario_4.txt" />
+        <option value="$PROJECT_DIR$/data/scenario_2.txt" />
+        <option value="$PROJECT_DIR$/src/ui/StringUtils.h" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
       </list>
     </option>
   </component>
@@ -409,16 +387,16 @@
     <property name="SearchEverywhereHistoryKey" value="glMatrixMo&#9;null&#9;null" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/data" />
-      <recent name="$PROJECT_DIR$/src" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/nfd" />
       <recent name="$PROJECT_DIR$/nfd/src" />
       <recent name="$PROJECT_DIR$/data" />
       <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/src/data" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/data" />
+      <recent name="$PROJECT_DIR$/src" />
     </key>
   </component>
   <component name="RunManager" selected="Application.glutProject">
@@ -652,7 +630,9 @@
       <workItem from="1474949251266" duration="8976000" />
       <workItem from="1474961103987" duration="107000" />
       <workItem from="1474999902504" duration="6013000" />
-      <workItem from="1475034264922" duration="17108000" />
+      <workItem from="1475034264922" duration="17202000" />
+      <workItem from="1475082052828" duration="1021000" />
+      <workItem from="1475114650184" duration="4920000" />
     </task>
     <task id="LOCAL-00001" summary="the matrix generator class is created">
       <created>1474572078187</created>
@@ -850,11 +830,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475048232335</updated>
     </task>
-    <option name="localTasksCounter" value="29" />
+    <task id="LOCAL-00029" summary="Hooray!">
+      <created>1475052053989</created>
+      <option name="number" value="00029" />
+      <option name="presentableId" value="LOCAL-00029" />
+      <option name="project" value="LOCAL" />
+      <updated>1475052053989</updated>
+    </task>
+    <option name="localTasksCounter" value="30" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="206206000" />
+    <option name="totallyTimeSpent" value="212241000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -867,7 +854,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="150" y="23" width="1495" height="1000" extended-state="0" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21573949" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
@@ -876,7 +863,7 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="true" content_ui="tabs" />
@@ -904,7 +891,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="the matrix generator class is created" />
     <MESSAGE value="pop up menu created" />
     <MESSAGE value="git ignore created" />
     <MESSAGE value="window title changed" />
@@ -929,7 +915,8 @@
     <MESSAGE value="animations for euler angle done but need test" />
     <MESSAGE value="animations for euler angle done but need test; replay done" />
     <MESSAGE value="from euler to quaternion done; quaternion interpolation done; quaternion normalization done; quaternion vector preparation done" />
-    <option name="LAST_COMMIT_MESSAGE" value="from euler to quaternion done; quaternion interpolation done; quaternion normalization done; quaternion vector preparation done" />
+    <MESSAGE value="Hooray!" />
+    <option name="LAST_COMMIT_MESSAGE" value="Hooray!" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -959,8 +946,13 @@
           <line>84</line>
           <option name="timeStamp" value="194" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
+          <url>file://$PROJECT_DIR$/src/ui/StringUtils.cpp</url>
+          <line>24</line>
+          <option name="timeStamp" value="195" />
+        </line-breakpoint>
       </breakpoints>
-      <option name="time" value="195" />
+      <option name="time" value="196" />
     </breakpoint-manager>
     <watches-manager>
       <configuration name="CMakeRunConfiguration">
@@ -971,13 +963,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/stdio.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="932">
-          <caret line="152" column="2" selection-start-line="152" selection-start-column="2" selection-end-line="152" selection-end-column="2" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file:///usr/include/string.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="172">
@@ -1091,13 +1076,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/data/teddy.obj">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1134,14 +1112,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="41">
-          <caret line="18" column="52" selection-start-line="18" selection-start-column="52" selection-end-line="18" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="236">
@@ -1161,25 +1131,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="388">
-          <caret line="145" column="16" selection-start-line="145" selection-start-column="16" selection-end-line="145" selection-end-column="16" />
-          <folding>
-            <element signature="e#40#58#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/SetupFileLoader.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="21" column="33" selection-start-line="21" selection-start-column="33" selection-end-line="21" selection-end-column="33" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1198,30 +1149,14 @@
         <state relative-caret-position="495">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
-            <element signature="e#178#198#0" expanded="true" />
+            <element signature="e#178#198#0" expanded="false" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scenario_1.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scenario_2.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="27" column="27" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="356">
+        <state relative-caret-position="1215">
           <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="100" />
           <folding>
             <element signature="e#40#57#0" expanded="true" />
@@ -1229,62 +1164,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="127" column="89" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="89" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/setup/Preferences.h">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-214">
+        <state relative-caret-position="405">
           <caret line="27" column="72" selection-start-line="27" selection-start-column="72" selection-end-line="27" selection-end-column="72" />
           <folding>
             <element signature="e#144#166#0" expanded="true" />
             <element signature="e#210#230#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
-          <folding>
-            <element signature="e#148#170#0" expanded="true" />
-            <element signature="e#214#234#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/scenario_4.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="3" selection-start-line="3" selection-start-column="3" selection-end-line="3" selection-end-column="3" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="412">
-          <caret line="145" column="0" selection-start-line="145" selection-start-column="0" selection-end-line="145" selection-end-column="0" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="202">
-          <caret line="79" column="0" selection-start-line="79" selection-start-column="0" selection-end-line="79" selection-end-column="0" />
-          <folding>
-            <element signature="e#94#121#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1299,7 +1185,70 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/scenario_3.txt">
+    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1905">
+          <caret line="127" column="89" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="89" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="810">
+          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="850">
+          <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="23" column="62" selection-start-line="23" selection-start-column="62" selection-end-line="23" selection-end-column="62" />
+          <folding>
+            <element signature="e#148#170#0" expanded="false" />
+            <element signature="e#214#234#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/3_Euler-B_spline.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="160" column="52" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup/SetupFileLoader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="38" column="46" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/4_Quaternion-B_spline.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="450">
           <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
@@ -1307,10 +1256,52 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp">
+    <entry file="file://$PROJECT_DIR$/data/2_Quaternion-Catmull.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="81" column="38" selection-start-line="81" selection-start-column="38" selection-end-line="81" selection-end-column="38" />
+        <state relative-caret-position="225">
+          <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/1_Euler-Catmull.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/data/scenario_old.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="370">
+          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+          <folding>
+            <element signature="e#94#121#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="343">
+          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
           <folding />
         </state>
       </provider>

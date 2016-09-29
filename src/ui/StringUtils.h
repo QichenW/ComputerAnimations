@@ -14,7 +14,7 @@
 
 class UserInterfaceManager {
 public:
-    static void renderStatusMessage(bool areKeyFramesSet);
+    static void renderStatusMessage(int orientationMode, int interpolationMode, bool isPlaying);
 
 private:
     static char* buildString(const char **pointer, int numberOfSegments);

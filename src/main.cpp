@@ -89,7 +89,8 @@ void display(void) {
     glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
 
     // the setup info char * on the bottom left corner on window
-    UserInterfaceManager::renderStatusMessage(prefs.getAreKeyFramesLoaded());
+    UserInterfaceManager::renderStatusMessage(
+            prefs.getOrientationMode(), prefs.getInterpolationMode(), prefs.getIsPlaying());
     if(!prefs.getIsPlaying()){
         displayObject();
     } else {
@@ -105,7 +106,7 @@ int main(int argc, char **argv) {
     // initiate an instance of prefs to store the user preference
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
-    glutInitWindowSize(1280, 640);
+    glutInitWindowSize(1280, 800);
     glutInitWindowPosition(100, 100);
     window = glutCreateWindow("CSCI 6555 lab1 : rotation, key frame and interpolation");
     glutReshapeFunc(reshape);
