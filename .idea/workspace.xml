@@ -21,14 +21,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20259426-4258-46ad-bf43-f6ced7870ffd" name="Default" comment="">
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_1.txt" afterPath="$PROJECT_DIR$/data/1_Euler-Catmull.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_2.txt" afterPath="$PROJECT_DIR$/data/3_Euler-B_spline.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_3.txt" afterPath="$PROJECT_DIR$/data/2_Quaternion-Catmull.txt" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/data/scenario_4.txt" afterPath="$PROJECT_DIR$/data/4_Quaternion-B_spline.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/data/elephant.obj" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/CMakeLists.txt" afterPath="$PROJECT_DIR$/CMakeLists.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp" afterPath="$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp" afterPath="$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" afterPath="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/Preferences.cpp" afterPath="$PROJECT_DIR$/src/setup/Preferences.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/SetupFileLoader.cpp" afterPath="$PROJECT_DIR$/src/setup/SetupFileLoader.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" afterPath="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/StringUtils.cpp" afterPath="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/StringUtils.h" afterPath="$PROJECT_DIR$/src/ui/StringUtils.h" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/UserInputManager.cpp" afterPath="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/ui/UserInputManager.h" afterPath="$PROJECT_DIR$/src/ui/UserInputManager.h" />
     </list>
     <ignored path="glutProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -48,11 +53,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="false">
+      <file leaf-file-name="main.cpp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="370">
-              <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+            <state relative-caret-position="375">
+              <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
               <folding>
                 <element signature="e#94#121#0" expanded="true" />
               </folding>
@@ -60,81 +65,53 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="UserInputManager.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="266">
-              <caret line="160" column="52" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="52" />
+            <state relative-caret-position="748">
+              <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SetupFileLoader.cpp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/setup/SetupFileLoader.cpp">
+      <file leaf-file-name="SimpleObjLoader.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="38" column="46" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="46" />
+            <state relative-caret-position="-754">
+              <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="1_Euler-Catmull.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/1_Euler-Catmull.txt">
+      <file leaf-file-name="RotationHelper.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="0" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+            <state relative-caret-position="2640">
+              <caret line="179" column="38" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="3_Euler-B_spline.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/3_Euler-B_spline.txt">
+      <file leaf-file-name="QuaternionConverter.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-              <folding />
+            <state relative-caret-position="1305">
+              <caret line="87" column="85" selection-start-line="87" selection-start-column="85" selection-end-line="87" selection-end-column="85" />
+              <folding>
+                <element signature="e#40#57#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="2_Quaternion-Catmull.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/2_Quaternion-Catmull.txt">
+      <file leaf-file-name="InterpolationHelper.cpp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="15" column="13" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="4_Quaternion-B_spline.txt" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/data/4_Quaternion-B_spline.txt">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="450">
-              <caret line="30" column="0" selection-start-line="30" selection-start-column="0" selection-end-line="30" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringUtils.cpp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="343">
-              <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="StringUtils.h" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+            <state relative-caret-position="685">
+              <caret line="142" column="4" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -179,29 +156,29 @@
         <option value="$PROJECT_DIR$/src/setup/PreferenceManager.h" />
         <option value="$PROJECT_DIR$/src/setup/SimpleObjLoader.h" />
         <option value="$PROJECT_DIR$/nfd/CMakeLists.txt" />
-        <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.h" />
-        <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.cpp" />
         <option value="$PROJECT_DIR$/src/ui/UserInputManager.h" />
         <option value="$PROJECT_DIR$/src/matrix/MatrixGenerator.cpp" />
         <option value="$PROJECT_DIR$/src/matrix/MatrixGenerator.h" />
         <option value="$PROJECT_DIR$/src/matrix/RotationHelper.h" />
-        <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
-        <option value="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" />
         <option value="$PROJECT_DIR$/src/setup/Preferences.h" />
-        <option value="$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp" />
-        <option value="$PROJECT_DIR$/src/setup/Preferences.cpp" />
         <option value="$PROJECT_DIR$/src/matrix/QuaternionConverter.h" />
         <option value="$PROJECT_DIR$/src/matrix/InterpolationHelper.h" />
-        <option value="$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp" />
-        <option value="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" />
         <option value="$PROJECT_DIR$/data/scenario_1.txt" />
         <option value="$PROJECT_DIR$/data/scenario_3.txt" />
         <option value="$PROJECT_DIR$/data/scenario_4.txt" />
         <option value="$PROJECT_DIR$/data/scenario_2.txt" />
         <option value="$PROJECT_DIR$/src/ui/StringUtils.h" />
-        <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/CMakeLists.txt" />
+        <option value="$PROJECT_DIR$/src/setup/SetupFileLoader.cpp" />
         <option value="$PROJECT_DIR$/src/ui/StringUtils.cpp" />
+        <option value="$PROJECT_DIR$/src/ui/UserInputManager.cpp" />
+        <option value="$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp" />
+        <option value="$PROJECT_DIR$/src/setup/Preferences.cpp" />
+        <option value="$PROJECT_DIR$/src/matrix/RotationHelper.cpp" />
+        <option value="$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp" />
+        <option value="$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp" />
+        <option value="$PROJECT_DIR$/src/main.cpp" />
       </list>
     </option>
   </component>
@@ -304,60 +281,6 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="glutProject" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="glutProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="ui" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="glutProject" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="glutProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="setup" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="glutProject" />
-              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="glutProject" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="src" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="matrix" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -632,7 +555,7 @@
       <workItem from="1474999902504" duration="6013000" />
       <workItem from="1475034264922" duration="17202000" />
       <workItem from="1475082052828" duration="1021000" />
-      <workItem from="1475114650184" duration="4920000" />
+      <workItem from="1475114650184" duration="9463000" />
     </task>
     <task id="LOCAL-00001" summary="the matrix generator class is created">
       <created>1474572078187</created>
@@ -837,11 +760,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475052053989</updated>
     </task>
-    <option name="localTasksCounter" value="30" />
+    <task id="LOCAL-00030" summary="string util changed a bit; print to window position changed">
+      <created>1475120260627</created>
+      <option name="number" value="00030" />
+      <option name="presentableId" value="LOCAL-00030" />
+      <option name="project" value="LOCAL" />
+      <updated>1475120260627</updated>
+    </task>
+    <option name="localTasksCounter" value="31" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="212241000" />
+    <option name="totallyTimeSpent" value="216784000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -891,7 +821,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="pop up menu created" />
     <MESSAGE value="git ignore created" />
     <MESSAGE value="window title changed" />
     <MESSAGE value="window title changed again" />
@@ -916,7 +845,8 @@
     <MESSAGE value="animations for euler angle done but need test; replay done" />
     <MESSAGE value="from euler to quaternion done; quaternion interpolation done; quaternion normalization done; quaternion vector preparation done" />
     <MESSAGE value="Hooray!" />
-    <option name="LAST_COMMIT_MESSAGE" value="Hooray!" />
+    <MESSAGE value="string util changed a bit; print to window position changed" />
+    <option name="LAST_COMMIT_MESSAGE" value="string util changed a bit; print to window position changed" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -927,28 +857,18 @@
           <option name="timeStamp" value="187" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/main.cpp</url>
-          <line>76</line>
-          <option name="timeStamp" value="188" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
-          <url>file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp</url>
-          <line>144</line>
-          <option name="timeStamp" value="190" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp</url>
-          <line>27</line>
+          <line>28</line>
           <option name="timeStamp" value="193" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp</url>
-          <line>84</line>
+          <line>82</line>
           <option name="timeStamp" value="194" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="com.jetbrains.cidr.execution.debugger.OCBreakpointType">
           <url>file://$PROJECT_DIR$/src/ui/StringUtils.cpp</url>
-          <line>24</line>
+          <line>27</line>
           <option name="timeStamp" value="195" />
         </line-breakpoint>
       </breakpoints>
@@ -963,14 +883,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file:///usr/include/string.h">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="76" column="5" selection-start-line="76" selection-start-column="5" selection-end-line="76" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/data/porsche.obj" />
     <entry file="file://$PROJECT_DIR$/src/Shy.cpp" />
     <entry file="file://$PROJECT_DIR$/data/elephant.obj">
       <provider selected="true" editor-type-id="text-editor">
@@ -1127,39 +1039,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
-          <caret line="33" column="71" selection-start-line="33" selection-start-column="71" selection-end-line="33" selection-end-column="71" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="675">
-          <caret line="45" column="49" selection-start-line="45" selection-start-column="49" selection-end-line="45" selection-end-column="49" />
-          <folding>
-            <element signature="e#40#68#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="495">
           <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
           <folding>
             <element signature="e#178#198#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1215">
-          <caret line="81" column="10" selection-start-line="81" selection-start-column="10" selection-end-line="81" selection-end-column="100" />
-          <folding>
-            <element signature="e#40#57#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -1185,34 +1070,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1905">
-          <caret line="127" column="89" selection-start-line="127" selection-start-column="58" selection-end-line="127" selection-end-column="89" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="810">
-          <caret line="54" column="1" selection-start-line="54" selection-start-column="1" selection-end-line="54" selection-end-column="1" />
-          <folding>
-            <element signature="e#40#59#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="850">
-          <caret line="60" column="70" selection-start-line="60" selection-start-column="70" selection-end-line="60" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="315">
@@ -1228,22 +1085,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
           <caret line="16" column="0" selection-start-line="16" selection-start-column="0" selection-end-line="16" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="160" column="52" selection-start-line="160" selection-start-column="25" selection-end-line="160" selection-end-column="52" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/setup/SetupFileLoader.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="38" column="46" selection-start-line="38" selection-start-column="28" selection-end-line="38" selection-end-column="46" />
           <folding />
         </state>
       </provider>
@@ -1264,6 +1105,14 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/data/scenario_old.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/data/1_Euler-Catmull.txt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="165">
@@ -1272,7 +1121,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/data/scenario_old.txt">
+    <entry file="file://$PROJECT_DIR$/nfd/nfd_common.h">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/nfd/nfd_common.c">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
@@ -1283,26 +1140,94 @@
     <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.h">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="94" selection-start-line="16" selection-start-column="94" selection-end-line="16" selection-end-column="94" />
+          <caret line="16" column="28" selection-start-line="16" selection-start-column="28" selection-end-line="16" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-496">
+          <caret line="17" column="71" selection-start-line="17" selection-start-column="71" selection-end-line="17" selection-end-column="71" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup/SetupFileLoader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="32" column="37" selection-start-line="32" selection-start-column="37" selection-end-line="32" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/UserInputManager.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-154">
+          <caret line="124" column="5" selection-start-line="124" selection-start-column="5" selection-end-line="124" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="57" column="50" selection-start-line="57" selection-start-column="50" selection-end-line="57" selection-end-column="50" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup/Preferences.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="75" selection-start-line="13" selection-start-column="75" selection-end-line="13" selection-end-column="75" />
+          <folding>
+            <element signature="e#40#59#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/setup/SimpleObjLoader.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-754">
+          <caret line="27" column="39" selection-start-line="27" selection-start-column="39" selection-end-line="27" selection-end-column="39" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/RotationHelper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2640">
+          <caret line="179" column="38" selection-start-line="179" selection-start-column="38" selection-end-line="179" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/QuaternionConverter.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1305">
+          <caret line="87" column="85" selection-start-line="87" selection-start-column="85" selection-end-line="87" selection-end-column="85" />
+          <folding>
+            <element signature="e#40#57#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/matrix/InterpolationHelper.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="685">
+          <caret line="142" column="4" selection-start-line="142" selection-start-column="4" selection-end-line="142" selection-end-column="4" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main.cpp">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="95" column="12" selection-start-line="95" selection-start-column="12" selection-end-line="95" selection-end-column="12" />
+        <state relative-caret-position="375">
+          <caret line="25" column="27" selection-start-line="25" selection-start-column="27" selection-end-line="25" selection-end-column="27" />
           <folding>
             <element signature="e#94#121#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="343">
-          <caret line="50" column="14" selection-start-line="50" selection-start-column="14" selection-end-line="50" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>

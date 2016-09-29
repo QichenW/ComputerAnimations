@@ -14,6 +14,9 @@ static const char *strEuler ="Euler Angle & ";
 static const char *strQuaternion ="Quaternion & ";
 static char *strStatusInfo;
 
+/****
+ * This function takes care of what text to be displayed on the window
+ */
 void UserInterfaceManager::renderStatusMessage(int orientationMode, int interpolationMode, bool isPlaying) {
     int numberOfStrs;
     if (orientationMode == -1 || interpolationMode == -1){

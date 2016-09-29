@@ -10,6 +10,16 @@ using namespace std;
 FILE *filePointer;
 char firstWord[16];
 vector<GLfloat> vx, vy,vz;
+
+/****
+ * The machanism to load an object file is to first while reading throught the .obj file,
+ * store the coordinates of vertices and the identifiers of them.
+ * Then read through the file again to look for faces (triangles represented by identifiers of vertices),
+ * and use the information got from the first round, to create the opengl instructions to draw triangles,
+ * and save these instructions in a list, to be later called in main.cpp, when it is ready to plot the object.
+ * @param fileName
+ * @return identifier of the object
+ */
 GLuint SimpleObjLoader::loadObj(char *fileName) {
 
     GLfloat x, y, z;

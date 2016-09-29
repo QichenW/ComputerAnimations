@@ -7,6 +7,12 @@
 #include "InterpolationHelper.h"
 #include "QuaternionConverter.h"
 
+
+/****
+ * This class contains the setup for the animation.
+ * The fields except the list of quaternions are interpreted from the user input script.
+ * It also contains the coefficient matrices for the current time instance.
+ */
 Preferences::Preferences() {
     resetPreferences();
 }

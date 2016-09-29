@@ -18,7 +18,6 @@ GLfloat tVector[4]={}, quaternion[4] = {}, eulerAngle[3] = {}, translation[3] = 
 int window;
 
 static char* OBJECT_FILE_NAME = (char *) "teddy.obj";
-//static char* OBJECT_FILE_NAME = (char *) "elephant.obj";
 
 void drawFrame();
 
@@ -76,7 +75,6 @@ void drawFrame() {
         // prepare the quaternion vector
         InterpolationHelper::prepareQuaternionVector(quaternion, tVector, prefs.quaterRotationCoefficientMatrix);
         // move the object
-        //TODO quaternion version of rotation matrix is not done
         glMultMatrixf(RotationHelper::generateFlattenedTransformationMatrix(quaternion, translation, true));
     }
 
@@ -108,7 +106,7 @@ int main(int argc, char **argv) {
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_RGB | GLUT_DEPTH);
     glutInitWindowSize(1280, 800);
     glutInitWindowPosition(100, 100);
-    window = glutCreateWindow("CSCI 6555 lab1 : rotation, key frame and interpolation");
+    window = glutCreateWindow("CSCI 6555 project 1 : key frame, rotation and interpolation");
     glutReshapeFunc(reshape);
     glutDisplayFunc(display);
     glutIdleFunc(display);

@@ -41,7 +41,7 @@ target_link_libraries(glutProject ${EXTRA_LIBS} nativefiledialog)
 if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 
     # list of files for which we add a copy rule
-    set(object_files elephant.obj teddy.obj)
+    set(object_files teddy.obj)
 
     foreach(item IN LISTS object_files)
         message(STATUS ${item})
@@ -54,8 +54,6 @@ if (NOT CMAKE_CURRENT_SOURCE_DIR STREQUAL CMAKE_CURRENT_BINARY_DIR)
 endif()
 
 # files are only copied if a target depends on them
-add_custom_target(elephant ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/elephant.obj")
 add_custom_target(teddy ALL DEPENDS "${CMAKE_CURRENT_BINARY_DIR}/teddy.obj")
 # add the dependency project to the project target
-ADD_DEPENDENCIES(glutProject elephant)
 ADD_DEPENDENCIES(glutProject teddy)

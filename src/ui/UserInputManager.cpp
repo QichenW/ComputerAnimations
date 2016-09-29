@@ -15,12 +15,17 @@ static int* windowID;
 
 Preferences *prefsPointer;
 
+/****
+ * This function describes the behavior of the right mouse button menu.
+ * @param window is the identifier the opengl window
+ * @param preferences is the setup for current animation
+ */
 UserInputManager::UserInputManager(int * window, Preferences* preferences) {
     windowID = window;
     prefsPointer = preferences;
 }
 
-void UserInputManager::mainMenu (int id){
+void UserInputManager::setMouseMenuBehavior(int id){
     switch (id)
     {
         case 1:
@@ -88,31 +93,19 @@ void UserInputManager::mainMenu (int id){
 //    glEndList ();
 //}
 
+/****
+ * the callback function for mouse event, not yet populated
+ */
 void UserInputManager::mouseFunc (int button, int state, int x, int y) {
-    if ((button == GLUT_LEFT_BUTTON) && (state == GLUT_DOWN))
-        if (pointsChosen == 0)
-        {
-            x1 = x;
-            y1 = ySize - y;
-            pointsChosen = 1;
-        }
-        else
-        {
-            glNewList (++indexOfMenuInList, GL_COMPILE_AND_EXECUTE);
-            glBegin (GL_LINES);
-            glVertex2i (x1, y1);
-            glVertex2i (x, ySize-y);
-            glEnd ();
-            glEndList ();
-            //TODO figure out what above lines do
-            glFlush ();
-            pointsChosen = 0;
-        }
+//   TODO implement something here, like changing view direction; drag and drap;
 }
 
+/****
+ * define the entries of the right-mouse menu and call setMouseMenuBehavior to set the behavior
+ */
 void UserInputManager::createMouseMenu() {
 
-    glutCreateMenu (UserInputManager::mainMenu);
+    glutCreateMenu(UserInputManager::setMouseMenuBehavior);
 
 /** sub-menus not implemented for now **/
 //    int orientation_menu = glutCreateMenu(orientationMenu);
@@ -129,14 +122,13 @@ void UserInputManager::createMouseMenu() {
     glutAttachMenu (GLUT_RIGHT_BUTTON);
 }
 
-
+/****
+ * @param key press 'q' 'Q' or ESC to quit; press 'a' to reset
+ */
 void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
     switch ((char) key) {
         case 'a':
-            prefsPointer->setIsPlaying(true);
-            break;
-        case 'b':
-            prefsPointer->setIsPlaying(false);
+            prefsPointer->resetPreferences();
             break;
         case 'q':
         case 'Q':
@@ -150,7 +142,7 @@ void UserInputManager::keyboardFunc(unsigned char key, int x, int y) {
 }
 
 /****
- *
+ * Get the path to the user input script
  * @return true if loaded; false if not
  */
 bool UserInputManager::loadUserInputFromFileDialog() {

@@ -35,7 +35,8 @@ void QuaternionConverter::eulerAngleToQuaternion(GLfloat dest[4][4], GLfloat **l
     getQuaternionList(dest,qz, qy, qx);
 }
 /***
- * The multiplication of three quaternions
+ * Hard coded multiplication, get the array of combined quaternions from
+ * three arrays of quaternions representing the rotation about x,y,z axes respectively.
  *  dest = leftQuaternion * rightQuaternion
  * @param dest
  * @param middleQuaternion
@@ -83,7 +84,11 @@ void QuaternionConverter::getQuaternionList(GLfloat dest[4][4], GLfloat leftQuat
     }
 
 }
-
+/***
+ * This function is called when quaternions need to be normalized after interpolation
+ * @param quaternion
+ * @return
+ */
 GLfloat QuaternionConverter::getMagnitudeOfQuaternion(GLfloat quaternion[4]) {
     return (GLfloat)
             sqrt(pow(quaternion[0], 2) + pow(quaternion[1], 2) + pow(quaternion[2], 2) + pow(quaternion[3], 2));

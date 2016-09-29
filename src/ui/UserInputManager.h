@@ -16,7 +16,7 @@
 
 class UserInputManager {
 private:
-    static void mainMenu (int id);
+    static void setMouseMenuBehavior(int id);
 
 /** sub-menus not implemented for now **/
 //    static void orientationMenu(int id);

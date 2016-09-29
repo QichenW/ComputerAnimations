@@ -7,6 +7,9 @@
 #include "InterpolationHelper.h"
 #include "QuaternionConverter.h"
 
+/***
+ * These two matrices are the G matrices for catmull-rom and b-spline
+ */
 static const GLfloat basisCatmullMatrix[4][4] = {
         {(const GLfloat) -0.5, 1.5, (const GLfloat) -1.5, 0.5},
         {1,                    (const GLfloat) -2.5, 2,  (const GLfloat) -0.5},
@@ -20,10 +23,10 @@ static const GLfloat basisBsplineMatrix[4][4] = {
         {(const GLfloat) (1/6.0), (const GLfloat) (4/6.0), (const GLfloat) (1/6.0), 0}
 };
 /****
- * Get the coefficentMatrix
- * @param dest
- * @param interpolationMode
- * @param controlPoints
+ * Get the coefficentMatrix for translation or euler angle interpolation
+ * @param dest is where the coefficient matrix will be stored
+ * @param interpolationMode suggest either catmull-rom or b-spline
+ * @param controlPoints are either x-y-z coordinates or pitch, yaw, roll
  */
 void InterpolationHelper::calculate3dCoefficientMatrix(GLfloat (*dest)[3], int interpolationMode, float **controlPoints) {
     int i,j,k;
@@ -56,9 +59,9 @@ void InterpolationHelper::calculate3dCoefficientMatrix(GLfloat (*dest)[3], int i
 
 //TODO test this
 /****
- *  Calculate the coefficient matrix for quaternions
+ *  Calculate the coefficient matrix for quaternions interpolation
  * @param dest where the coeeficient matrix is stored
- * @param interpolationMode
+ * @param interpolationMode suggest either catmull-rom or b-spline
  * @param quaternionList
  */
 void InterpolationHelper::calculate4dCoefficientMatrix(
@@ -102,7 +105,6 @@ void InterpolationHelper::prepareTimeVector(GLfloat *tVector, GLfloat t) {
     *(tVector + 3) = 1;
 }
 
-//TODO test this
 /****
  * calculate the translation OR euler angle vector for current time given the coefficient matrix
  * @param transOrEuler the address of the vector to store translation vector
@@ -120,7 +122,7 @@ void InterpolationHelper::prepareTranslationOrEulerAngleVector(GLfloat *transOrE
     }
 }
 
-//TODO implement this
+
 /****
  * calculate the quaternion for current time given the coefficient matrix
  * @param quaternion
@@ -137,6 +139,7 @@ InterpolationHelper::prepareQuaternionVector(GLfloat *quaternion, GLfloat *tVect
         }
     }
     cout<< "the magnitude before is " <<QuaternionConverter::getMagnitudeOfQuaternion(quaternion)<< endl;
+
     // normalize the quaternion before using it to generate transformation matrix
     GLfloat magnitude = QuaternionConverter::getMagnitudeOfQuaternion(quaternion);
     for(i = 0; i < QUATERNION_DIMENSION; i++){

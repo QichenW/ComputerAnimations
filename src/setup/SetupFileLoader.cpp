@@ -6,7 +6,11 @@
 #include <iostream>
 #include "SetupFileLoader.h"
 using namespace std;
-
+/****
+ * This is called inside UserInputManager::loadUserInputFromFileDialog()
+ * @param path is provided by UserInputManager::loadUserInputFromFileDialog()
+ * @param pPreferences
+ */
 void SetupFileLoader::loadPreferencesFromTextFile(char *path, Preferences *pPreferences) {
     FILE *setupFilePointer;
     float tempFloat1, tempFloat2, tempFloat3;
@@ -29,6 +33,8 @@ void SetupFileLoader::loadPreferencesFromTextFile(char *path, Preferences *pPref
             // if reach comment break
             break;
         }
+        //The following chuck of code interpret user input from the file, how to write a user input script
+        // is shown in the .txt files in /data
         if (strcmp(firstWord, "n") == 0) {
             fscanf(setupFilePointer, "%d", &tempInteger);
             // save number of key frames in preferences
@@ -51,6 +57,5 @@ void SetupFileLoader::loadPreferencesFromTextFile(char *path, Preferences *pPref
             (*pPreferences).addOneEulerAngle(indexOfNetEulerAngle++, tempFloat1, tempFloat2, tempFloat3);
         }
     }
-
     fclose(setupFilePointer);
 }

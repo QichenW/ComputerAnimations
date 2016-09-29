@@ -14,6 +14,7 @@ static float transformationMatrix[4][4] ={};
 static float flattenedTransformationMatrix[16] ={};
 
 /**
+ * prepare the flattened matrix to be feed into glMultMatrixf(), which is multipy to all points in the scene
  * @parm is either a quaternion or a vector suggesting Euler Angle
  * **/
 float* RotationHelper::generateFlattenedTransformationMatrix(float *tuple, float *trip, bool isQuaternion){
@@ -33,8 +34,6 @@ float* RotationHelper::generateFlattenedTransformationMatrix(float *tuple, float
     transformationMatrix[0][3] += translationX;
     transformationMatrix[1][3] += translationY;
     transformationMatrix[2][3] += translationZ;
-//    TODO debug only
-    printTransformationMatrix();
     /**
      * openGL has column major matrix (so my matrix should be transposed), the flattened matrix looks like m[] below
      * **/
@@ -52,7 +51,6 @@ float* RotationHelper::generateFlattenedTransformationMatrix(float *tuple, float
     return  flattenedTransformationMatrix;
 }
 
-//TODO test the function
 /****
  * Hard coded
  * get the homogenuous matrix for quaternion approach, store it in the global variable transformationMatrix
@@ -83,9 +81,6 @@ void RotationHelper::getHomogeneousFromQuaternion(float *quaternion) {
 
     // multiply the transformation matrix with the rotation matrix
     applyRotation(quaternionRotationMatrix);
-    //TODO debug only
-    printTransformationMatrix();
-
 }
 
 /****
@@ -123,20 +118,22 @@ void RotationHelper::getHomogeneousFromEulerAngle(float *eulerAngle) {
 
     // multiply the transformation matrix with three rotation matrices
     applyRotation(homogeneousPitch);
-    //TODO debug only
+    //for debug only
     printTransformationMatrix();
     applyRotation(homogeneousYaw);
-    //TODO debug only
+    //for debug only
     printTransformationMatrix();
     applyRotation(homogeneousRoll);
 
-    //TODO debug only
+    //for debug only
     printTransformationMatrix();
 }
 
-/**
- * matrices multiplication
- * **/
+/****
+ * matrices multiplication, transformationMatrix is initially an unit matrix,
+ * call this function to multiply one rotation matrix to it.
+ * @param rotationMatrix is to be multiplied to transformationMatrix
+ */
 void RotationHelper::applyRotation(float rotationMatrix[4][4]) {
     // temporarily hold the result
     float tempMatrix[4][4] ={};
@@ -180,6 +177,7 @@ void RotationHelper::initTransformationMatrixAsIdentity() {
 }
 
 /****
+ * print out the transformation matrix
  * for debug use only
  */
 void RotationHelper::printTransformationMatrix() {
