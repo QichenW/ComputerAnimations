@@ -21,9 +21,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="20259426-4258-46ad-bf43-f6ced7870ffd" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/glutProject.iml" afterPath="$PROJECT_DIR$/.idea/glutProject.iml" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/shaders/FragmentShader.txt" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/shaders/VertexShader.txt" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main.cpp" afterPath="$PROJECT_DIR$/src/main.cpp" />
     </list>
     <ignored path="glutProject.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -68,17 +68,37 @@
       <file leaf-file-name="StringUtils.cpp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="225">
               <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="VertexShader.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/shaders/VertexShader.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="165">
+              <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="FragmentShader.txt" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/shaders/FragmentShader.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="105">
+              <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="CMakeLists.txt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="100">
+            <state relative-caret-position="180">
               <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
               <folding />
             </state>
@@ -126,8 +146,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/src/Shy.cpp" />
-        <option value="$PROJECT_DIR$/src/Cool.h" />
         <option value="$PROJECT_DIR$/objLoader.cpp" />
         <option value="$PROJECT_DIR$/data/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/data/elepham.obj" />
@@ -177,6 +195,8 @@
         <option value="$PROJECT_DIR$/data/1_Euler-Catmull.txt" />
         <option value="$PROJECT_DIR$/CMakeLists.txt" />
         <option value="$PROJECT_DIR$/src/main.cpp" />
+        <option value="$PROJECT_DIR$/src/shaders/VertexShader.txt" />
+        <option value="$PROJECT_DIR$/src/shaders/FragmentShader.txt" />
       </list>
     </option>
   </component>
@@ -188,8 +208,8 @@
   </component>
   <component name="OCFindUsagesOptions" text="false" ivars="false" properties="true" derivedClasses="false" />
   <component name="ProjectFrameBounds">
-    <option name="x" value="61" />
-    <option name="y" value="23" />
+    <option name="x" value="67" />
+    <option name="y" value="210" />
     <option name="width" value="1495" />
     <option name="height" value="1000" />
   </component>
@@ -297,6 +317,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="ui" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glutProject" />
+              <option name="myItemType" value="com.jetbrains.cidr.projectView.CidrFilesViewHelper$MyProjectTreeStructure$1" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="glutProject" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="shaders" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -573,7 +611,7 @@
       <workItem from="1475082052828" duration="1021000" />
       <workItem from="1475114650184" duration="16522000" />
       <workItem from="1475139679287" duration="2000" />
-      <workItem from="1476251203512" duration="2486000" />
+      <workItem from="1476251203512" duration="3693000" />
     </task>
     <task id="LOCAL-00001" summary="the matrix generator class is created">
       <created>1474572078187</created>
@@ -806,11 +844,18 @@
       <option name="project" value="LOCAL" />
       <updated>1475133417382</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="now glew is included">
+      <created>1476258616307</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1476258616307</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="226331000" />
+    <option name="totallyTimeSpent" value="227538000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -822,10 +867,10 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="61" y="23" width="1495" height="1000" extended-state="0" />
-    <editor active="false" />
+    <frame x="67" y="210" width="1495" height="1000" extended-state="0" />
+    <editor active="true" />
     <layout>
-      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1485753" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1485753" sideWeight="0.5" order="1" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="CMake" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32929516" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -860,7 +905,6 @@
     <option name="myLimit" value="2678400000" />
   </component>
   <component name="VcsManagerConfiguration">
-    <MESSAGE value="window title changed again" />
     <MESSAGE value="euler angle done" />
     <MESSAGE value="translation done" />
     <MESSAGE value="translation done&#10;quaternion placeholder created" />
@@ -885,7 +929,8 @@
     <MESSAGE value="string util changed a bit; print to window position changed" />
     <MESSAGE value="coded trimmed, more comment provided" />
     <MESSAGE value="now translation and rotation are done with self written functions" />
-    <option name="LAST_COMMIT_MESSAGE" value="now translation and rotation are done with self written functions" />
+    <MESSAGE value="now glew is included" />
+    <option name="LAST_COMMIT_MESSAGE" value="now glew is included" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -922,8 +967,6 @@
     </watches-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/Shy.cpp" />
-    <entry file="file://$PROJECT_DIR$/data/elephant.obj" />
     <entry file="file://$PROJECT_DIR$/src/Guy.h" />
     <entry file="file://$PROJECT_DIR$/src/Shy.h" />
     <entry file="file://$PROJECT_DIR$/src/Cool.h" />
@@ -1153,14 +1196,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/LICENSE">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1219,8 +1254,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CMakeLists.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="100">
+        <state relative-caret-position="180">
           <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/ui/StringUtils.cpp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="17" column="70" selection-start-line="17" selection-start-column="70" selection-end-line="17" selection-end-column="70" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shaders/FragmentShader.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="0" selection-start-line="7" selection-start-column="0" selection-end-line="7" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/shaders/VertexShader.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="15" selection-start-line="11" selection-start-column="15" selection-end-line="11" selection-end-column="15" />
           <folding />
         </state>
       </provider>
