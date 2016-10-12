@@ -48,7 +48,6 @@
           <root url="file:///System/Library/Frameworks/InstantMessage.framework/Headers" />
           <root url="file:///System/Library/Frameworks/MapKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DirectoryService.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/ScriptingBridge.framework/Headers" />
           <root url="file:///System/Library/Frameworks/InstallerPlugins.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ForceFeedback.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreMediaIO.framework/Headers" />
@@ -123,6 +122,7 @@
           <root url="file:///System/Library/Frameworks/OpenDirectory.framework/Frameworks/CFOpenDirectory.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOBluetooth.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOBluetooth.framework/Frameworks/CoreBluetooth.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/ScriptingBridge.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreAudio.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DiskArbitration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreBluetooth.framework/Headers" />
@@ -226,7 +226,6 @@
           <root url="file:///System/Library/Frameworks/InstantMessage.framework/Headers" />
           <root url="file:///System/Library/Frameworks/MapKit.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DirectoryService.framework/Headers" />
-          <root url="file:///System/Library/Frameworks/ScriptingBridge.framework/Headers" />
           <root url="file:///System/Library/Frameworks/InstallerPlugins.framework/Headers" />
           <root url="file:///System/Library/Frameworks/ForceFeedback.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreMediaIO.framework/Headers" />
@@ -301,6 +300,7 @@
           <root url="file:///System/Library/Frameworks/OpenDirectory.framework/Frameworks/CFOpenDirectory.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOBluetooth.framework/Headers" />
           <root url="file:///System/Library/Frameworks/IOBluetooth.framework/Frameworks/CoreBluetooth.framework/Headers" />
+          <root url="file:///System/Library/Frameworks/ScriptingBridge.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreAudio.framework/Headers" />
           <root url="file:///System/Library/Frameworks/DiskArbitration.framework/Headers" />
           <root url="file:///System/Library/Frameworks/CoreBluetooth.framework/Headers" />
@@ -393,7 +393,7 @@
           <root url="file:///System/Library/Frameworks/InstantMessage.framework" />
           <root url="file:///System/Library/Frameworks/MapKit.framework" />
           <root url="file:///System/Library/Frameworks/DirectoryService.framework" />
-          <root url="file:///System/Library/Frameworks/ScriptingBridge.framework" />
+          <root url="file:///System/Library/Frameworks/SafariServices.framework" />
           <root url="file:///System/Library/Frameworks/InstallerPlugins.framework" />
           <root url="file:///System/Library/Frameworks/ForceFeedback.framework" />
           <root url="file:///System/Library/Frameworks/CoreMediaIO.framework" />
@@ -446,6 +446,7 @@
           <root url="file:///System/Library/Frameworks/IMCore.framework" />
           <root url="file:///System/Library/Frameworks/OpenDirectory.framework" />
           <root url="file:///System/Library/Frameworks/IOBluetooth.framework" />
+          <root url="file:///System/Library/Frameworks/ScriptingBridge.framework" />
           <root url="file:///System/Library/Frameworks/CoreAudio.framework" />
           <root url="file:///System/Library/Frameworks/DiskArbitration.framework" />
           <root url="file:///System/Library/Frameworks/CoreBluetooth.framework" />

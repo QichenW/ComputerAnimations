@@ -4,7 +4,7 @@
 //  Copyright © 2016 Qichen Wang. All rights reserved.
 //
 
-
+#include <GL/glew.h>
 #include <RotationHelper.h>
 #include <UserInputManager.h>
 #include <SimpleObjLoader.h>
